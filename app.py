@@ -16,10 +16,18 @@ def index():
 @app.route('/post', methods=['GET', 'POST'])
 def post():
     write(request.json['data'])
-    ret = subprocess.run("py data.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
+    try:
+        ret = subprocess.run("py data.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=10, encoding="utf-8")
+    except subprocess.TimeoutExpired as e:
+        print(e)
+        return {
+            'res': '',
+            'err': e
+        }
+    print(f'{ret.stderr = }')
     return {
         'res': ret.stdout,
         'err': ret.stderr
     }
 
-app.run('localhost', 55555, debug=True)
+app.run('localhost', 55555, debug=False)
