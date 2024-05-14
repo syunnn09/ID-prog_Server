@@ -1,9 +1,11 @@
-from flask import Flask, request
+from flask import Flask, request, redirect
 from flask_cors import CORS
 import subprocess
 
 app = Flask(__name__)
 cors = CORS(app, resources={r'/*': {'origins': 'http://localhost:5173'}})
+
+count = 0
 
 def write(data):
     with open('data.py', 'w', encoding='shift-jis') as f:
@@ -12,6 +14,10 @@ def write(data):
 @app.route('/')
 def index():
     return 'Hello'
+
+@app.route('/redirect')
+def red():
+    return redirect('/')
 
 @app.route('/post', methods=['GET', 'POST'])
 def post():
@@ -28,6 +34,15 @@ def post():
     return {
         'res': ret.stdout,
         'err': err
+    }
+
+@app.route('/login', methods=['POST'])
+def login():
+    global count
+    count += 1
+    return {
+        "id": count,
+        "ok": True
     }
 
 app.run('localhost', 55555, debug=False)
