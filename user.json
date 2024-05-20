@@ -1,0 +1,25 @@
+{
+    "uid": "cJ2HzFoEExXyHZr7yzQMWv0OOHe2",
+    "email": "syusuke5103@gmail.com",
+    "emailVerified": false,
+    "isAnonymous": false,
+    "providerData": [
+        {
+            "providerId": "password",
+            "uid": "syusuke5103@gmail.com",
+            "displayName": null,
+            "email": "syusuke5103@gmail.com",
+            "phoneNumber": null,
+            "photoURL": null
+        }
+    ],
+    "stsTokenManager": {
+        "refreshToken": "AMf-vBwNMUVQ7_hLpu3XA2C33P260uTzSzGOmA-_9U5stVq1brLK6KCMtircq2I5mu9AKeKx7QuunkQTvMNPo04cZb76r0DiukgIEsa2u25e-PDJjNQ2mfv0pB68Qoa6YrNfYWYRqjQBDpPqgMeIHu0ZJ43BxmiSS2m3hjGdpZKX8EDzRK_SmjLn682etz9Ty5NKZk6ngr-d",
+        "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vaWQtcHJvZyIsImF1ZCI6ImlkLXByb2ciLCJhdXRoX3RpbWUiOjE3MTYxNjc2NjYsInVzZXJfaWQiOiJjSjJIekZvRUV4WHlIWnI3eXpRTVd2ME9PSGUyIiwic3ViIjoiY0oySHpGb0VFeFh5SFpyN3l6UU1XdjBPT0hlMiIsImlhdCI6MTcxNjE2NzY2NiwiZXhwIjoxNzE2MTcxMjY2LCJlbWFpbCI6InN5dXN1a2U1MTAzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJzeXVzdWtlNTEwM0BnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.EW3LVRaNNWMi2JGBhNWwT3yf7DkOkK-NIwi3XZvohI6OXHQIP0sFI7yyTBclit-QdHBadlzknuz-qwHCGfrBVMDnZHCpE6r7sFAbxxbuJl_S6L7JcCr4P-XFWJObHGqexkP3qccXIfeQoXnohGBQ8LmGn9J6l-KAlQmadkVOzAonszaIn3kvgLa-2SWfkp7shPPygEtRRZbqKVEglYvQevwIj-DgzDkhJx4xgfsNUK7bCujSHYKVOiPDz1_JcSItgv05o_CTpl_NiYvsofCvQfFdR8OqImNxtxs4_Lla4OgEaWQXHGBX2hjjMHavUd1NYnrvGhgl7vl6LVIvpgvgiA",
+        "expirationTime": 1716171474710
+    },
+    "createdAt": "1715841516713",
+    "lastLoginAt": "1716167666585",
+    "apiKey": "AIzaSyD393qn9jt1_tB5ektLaXNETbfviUYhsDk",
+    "appName": "[DEFAULT]"
+}
