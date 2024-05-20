@@ -25,17 +25,18 @@ def post():
     with open('user.json', 'w') as f:
         f.write(json.dumps(request.json['user'], indent=4))
     write(request.json['data'])
+    out = ''
     err = ''
     try:
-        ret = subprocess.run("py data.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=10, encoding="shift-jis")
+        ret = subprocess.run("py data.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=5, encoding="shift-jis")
+        out = ret.stdout
+        if ret.stderr:
+            err = ret.stderr
     except Exception as e:
-        print(e)
+        print(f'{e = }')
         err = e
-    if ret.stderr:
-        err = ret.stderr
-    print(f'{ret.stderr = }')
     return {
-        'res': ret.stdout,
+        'res': out,
         'err': err
     }
 
