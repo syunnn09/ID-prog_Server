@@ -3,6 +3,8 @@ from flask_cors import CORS
 import subprocess
 import json
 
+import utils
+
 app = Flask(__name__)
 cors = CORS(app, resources={r'/*': {'origins': 'http://localhost:5173'}})
 
@@ -22,8 +24,9 @@ def red():
 
 @app.route('/post', methods=['GET', 'POST'])
 def post():
-    with open('user.json', 'w') as f:
-        f.write(json.dumps(request.json['user'], indent=4))
+    if request.json['user']:
+        with open('user.json', 'w') as f:
+            f.write(json.dumps(request.json['user'], indent=4))
     write(request.json['data'])
     out = ''
     err = ''
@@ -48,5 +51,10 @@ def login():
         "id": count,
         "ok": True
     }
+
+@app.route('/api/data')
+def get_data():
+    print(request.get_data('user'))
+    return json.dumps(utils.set_progress(1))
 
 app.run('localhost', 55555, debug=False)

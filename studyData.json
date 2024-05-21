@@ -1,0 +1,64 @@
+{
+    "studies": [
+        {
+            "id": 1,
+            "title": "数値・文字列",
+            "sections": {
+                "1": {
+                    "title": "数値"
+                },
+                "2": {
+                    "title": "文字列"
+                },
+                "3": {
+                    "title": "変数"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "title": "比較・繰り返し",
+            "sections": {
+                "1": {
+                    "title": "if"
+                },
+                "2": {
+                    "title": "while"
+                },
+                "3": {
+                    "title": "for"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "title": "配列",
+            "sections": {
+                "1": {
+                    "title": "list"
+                },
+                "2": {
+                    "title": "dict"
+                },
+                "3": {
+                    "title": "tuple"
+                },
+                "4": {
+                    "title": "set"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "title": "関数・モジュール",
+            "sections": {
+                "1": {
+                    "title": "関数"
+                },
+                "2": {
+                    "title": "モジュール"
+                }
+            }
+        }
+    ]
+}
