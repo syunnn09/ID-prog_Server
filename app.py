@@ -52,9 +52,8 @@ def login():
         "ok": True
     }
 
-@app.route('/api/data')
+@app.route('/api/data', methods=['POST'])
 def get_data():
-    print(request.get_data('user'))
     return json.dumps(utils.set_progress(1))
 
 app.run('localhost', 55555, debug=False)
