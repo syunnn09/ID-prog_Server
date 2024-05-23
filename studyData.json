@@ -5,7 +5,15 @@
             "title": "数値・文字列",
             "sections": {
                 "1": {
-                    "title": "数値"
+                    "title": "数値",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "\"hello\"は何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 1
+                        }
+                    ]
                 },
                 "2": {
                     "title": "文字列"

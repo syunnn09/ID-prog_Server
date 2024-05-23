@@ -23,6 +23,12 @@ def set_progress(user: int) -> list[dict]:
         ret.append(item)
     return ret
 
+def get_detail_data(user: int, _id: int) -> dict:
+    for study in getStudies():
+        if study['id'] == _id:
+            return study
+    return None
+
 if __name__ == '__main__':
     print(set_progress(1))
     # print(getStudies())

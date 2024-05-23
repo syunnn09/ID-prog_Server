@@ -56,4 +56,12 @@ def login():
 def get_data():
     return json.dumps(utils.set_progress(1))
 
+@app.route('/api/getDetail', methods=['POST'])
+def get_detail_data():
+    _id = request.json['id']
+    if _id is None:
+        return None
+    _id = int(_id)
+    return json.dumps(utils.get_detail_data(1, _id))
+
 app.run('localhost', 55555, debug=False)
