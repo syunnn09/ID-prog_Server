@@ -9,6 +9,17 @@
                     "questions": [
                         {
                             "questionType": 1,
+                            "question": "123は何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 0
+                        }
+                    ]
+                },
+                {
+                    "title": "文字列",
+                    "questions": [
+                        {
+                            "questionType": 1,
                             "question": "\"hello\"は何型でしょう。",
                             "choices": ["int", "str", "float"],
                             "answer": 1
@@ -16,57 +27,76 @@
                     ]
                 },
                 {
-                    "title": "文字列"
-                },
-                {
-                    "title": "変数"
+                    "title": "変数",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "変数の定義として正しいのはどれでしょう。",
+                            "choices": ["i = 3", "str", "float"],
+                            "answer": 1
+                        },
+                        {
+                            "questionType": 1,
+                            "question": "変数を利用するメリットはどれでしょう。",
+                            "choices": ["繰り返し利用ができる", "可読性の向上", "保守性の向上", "すべて"],
+                            "answer": 3
+                        }
+                    ]
                 }
             ]
         },
         {
             "id": 2,
             "title": "比較・繰り返し",
-            "sections": {
-                "1": {
-                    "title": "if"
+            "sections": [
+                {
+                    "title": "if",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "\"hello\"は何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 1
+                        }
+                    ]
                 },
-                "2": {
+                {
                     "title": "while"
                 },
-                "3": {
+                {
                     "title": "for"
                 }
-            }
+            ]
         },
         {
             "id": 3,
             "title": "配列",
-            "sections": {
-                "1": {
+            "sections": [
+                {
                     "title": "list"
                 },
-                "2": {
+                {
                     "title": "dict"
                 },
-                "3": {
+                {
                     "title": "tuple"
                 },
-                "4": {
+                {
                     "title": "set"
                 }
-            }
+            ]
         },
         {
             "id": 4,
             "title": "関数・モジュール",
-            "sections": {
-                "1": {
+            "sections": [
+                {
                     "title": "関数"
                 },
-                "2": {
+                {
                     "title": "モジュール"
                 }
-            }
+            ]
         }
     ]
 }
