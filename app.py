@@ -30,14 +30,18 @@ def post():
     write(request.json['data'])
     out = ''
     err = ''
+    utils.check(request)
     try:
-        ret = subprocess.run("py data.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=5, encoding="shift-jis")
+        args = request.json['args']
+        ret = subprocess.run('py data.py', input=args, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=5, encoding="shift-jis")
         out = ret.stdout
         if ret.stderr:
             err = ret.stderr
     except Exception as e:
         print(f'{e = }')
         err = e
+    out = utils.replace_text(out)
+    err = utils.replace_text(err)
     return {
         'res': out,
         'err': err

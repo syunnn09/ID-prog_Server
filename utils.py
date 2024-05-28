@@ -1,4 +1,5 @@
 import json
+from flask.wrappers import Request
 
 with open('./studyData.json', 'r', encoding='utf-8') as f:
     data = json.loads(f.read())
@@ -28,6 +29,16 @@ def get_detail_data(user: int, _id: int) -> dict:
         if study['id'] == _id:
             return study
     return None
+
+def replace_text(text: str) -> str:
+    return text.replace('\n', '<br>').replace(' ', '&nbsp;').replace('\t', '&emsp;')
+
+def check(request: Request):
+    data: str = request.json['data']
+    args: str = request.json['args']
+    count = data.count('input()')
+    count2 = args.count('\n') + 1
+    return count == count2
 
 if __name__ == '__main__':
     print(set_progress(1))
