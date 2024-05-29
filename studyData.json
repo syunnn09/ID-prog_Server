@@ -9,6 +9,12 @@
                     "questions": [
                         {
                             "questionType": 1,
+                            "question": "掛け算した結果を表示しているプログラムはどれでしょう。",
+                            "choices": ["print(3 * 3)", "print(3 ** 3)", "print(3 / 3)"],
+                            "answer": 0
+                        },
+                        {
+                            "questionType": 1,
                             "question": "123は何型でしょう。",
                             "choices": ["int", "str", "float"],
                             "answer": 0
@@ -50,21 +56,37 @@
             "title": "比較・繰り返し",
             "sections": [
                 {
-                    "title": "if",
+                    "title": "if文",
                     "questions": [
                         {
                             "questionType": 1,
-                            "question": "\"hello\"は何型でしょう。",
+                            "question": "\"もし\"を表すのはどれでしょう。",
+                            "choices": ["if", "while", "for"],
+                            "answer": 0
+                        }
+                    ]
+                },
+                {
+                    "title": "while文",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "helloは何型でしょう。",
                             "choices": ["int", "str", "float"],
                             "answer": 1
                         }
                     ]
                 },
                 {
-                    "title": "while"
-                },
-                {
-                    "title": "for"
+                    "title": "for文",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "helloは何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 1
+                        }
+                    ]
                 }
             ]
         },
@@ -73,16 +95,48 @@
             "title": "配列",
             "sections": [
                 {
-                    "title": "list"
+                    "title": "list",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "helloは何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 1
+                        }
+                    ]
                 },
                 {
-                    "title": "dict"
+                    "title": "dict",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "helloは何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 1
+                        }
+                    ]
                 },
                 {
-                    "title": "tuple"
+                    "title": "tuple",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "helloは何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 1
+                        }
+                    ]
                 },
                 {
-                    "title": "set"
+                    "title": "set",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "helloは何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 1
+                        }
+                    ]
                 }
             ]
         },
@@ -91,10 +145,26 @@
             "title": "関数・モジュール",
             "sections": [
                 {
-                    "title": "関数"
+                    "title": "関数",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "helloは何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 1
+                        }
+                    ]
                 },
                 {
-                    "title": "モジュール"
+                    "title": "モジュール",
+                    "questions": [
+                        {
+                            "questionType": 1,
+                            "question": "helloは何型でしょう。",
+                            "choices": ["int", "str", "float"],
+                            "answer": 1
+                        }
+                    ]
                 }
             ]
         }
