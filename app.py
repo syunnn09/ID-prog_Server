@@ -4,6 +4,7 @@ import subprocess
 import json
 
 import utils
+import dbutils
 
 app = Flask(__name__)
 cors = CORS(app, resources={r'/*': {'origins': 'http://localhost:5173'}})
@@ -18,9 +19,24 @@ def write(data):
 def index():
     return 'Hello'
 
-@app.route('/redirect')
-def red():
-    return redirect('/')
+@app.route('/question/solve', methods=['POST'])
+def solve():
+    try:
+        uid = utils.get_uid(request.json['user'])
+        id = json.loads(request.json['id'])
+        section = int(request.json['section'])
+        question_no = int(request.json['question_no'])
+    except Exception as e:
+        print(f'{e = }')
+        return {'status': 'false', 'reason': str(e)}
+
+    try:
+        dbutils.solve(uid, id, section, question_no)
+    except Exception as e:
+        print(f'{e = }')
+        return {'status': 'false', 'reason': str(e)}
+    return {'status': 'true'}
+
 
 @app.route('/post', methods=['GET', 'POST'])
 def post():
@@ -30,7 +46,7 @@ def post():
     write(request.json['data'])
     out = ''
     err = ''
-    print(utils.check(request))
+    utils.check(request)
     try:
         args = request.json['args']
         ret = subprocess.run('py data.py', input=args, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=5, encoding="shift-jis")
@@ -62,10 +78,10 @@ def get_data():
 
 @app.route('/api/getDetail', methods=['POST'])
 def get_detail_data():
-    _id = request.json['id']
-    if _id is None:
+    if not utils.check_detail(request):
         return None
-    _id = int(_id)
-    return json.dumps(utils.get_detail_data(1, _id))
+    _id = int(request.json['id'])
+    uid = utils.get_uid(request.json['user'])
+    return json.dumps(utils.get_detail_data(uid, _id))
 
 app.run('localhost', 55555, debug=False)

@@ -6,14 +6,17 @@
             "sections": [
                 {
                     "title": "数値",
+                    "section": 1,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "掛け算した結果を表示しているプログラムはどれでしょう。",
                             "choices": ["print(3 * 3)", "print(3 ** 3)", "print(3 / 3)"],
                             "answer": 0
                         },
                         {
+                            "question_no": 2,
                             "questionType": 1,
                             "question": "123は何型でしょう。",
                             "choices": ["int", "str", "float"],
@@ -23,8 +26,10 @@
                 },
                 {
                     "title": "文字列",
+                    "section": 2,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "\"hello\"は何型でしょう。",
                             "choices": ["int", "str", "float"],
@@ -34,14 +39,17 @@
                 },
                 {
                     "title": "変数",
+                    "section": 3,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "変数の定義として正しいのはどれでしょう。",
                             "choices": ["i = 3", "str", "float"],
                             "answer": 1
                         },
                         {
+                            "question_no": 2,
                             "questionType": 1,
                             "question": "変数を利用するメリットはどれでしょう。",
                             "choices": ["繰り返し利用ができる", "可読性の向上", "保守性の向上", "すべて"],
@@ -57,8 +65,10 @@
             "sections": [
                 {
                     "title": "if文",
+                    "section": 1,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "\"もし\"を表すのはどれでしょう。",
                             "choices": ["if", "while", "for"],
@@ -68,8 +78,10 @@
                 },
                 {
                     "title": "while文",
+                    "section": 2,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "helloは何型でしょう。",
                             "choices": ["int", "str", "float"],
@@ -79,8 +91,10 @@
                 },
                 {
                     "title": "for文",
+                    "section": 3,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "helloは何型でしょう。",
                             "choices": ["int", "str", "float"],
@@ -96,8 +110,10 @@
             "sections": [
                 {
                     "title": "list",
+                    "section": 1,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "helloは何型でしょう。",
                             "choices": ["int", "str", "float"],
@@ -107,8 +123,10 @@
                 },
                 {
                     "title": "dict",
+                    "section": 2,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "helloは何型でしょう。",
                             "choices": ["int", "str", "float"],
@@ -118,8 +136,10 @@
                 },
                 {
                     "title": "tuple",
+                    "section": 3,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "helloは何型でしょう。",
                             "choices": ["int", "str", "float"],
@@ -129,8 +149,10 @@
                 },
                 {
                     "title": "set",
+                    "section": 4,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "helloは何型でしょう。",
                             "choices": ["int", "str", "float"],
@@ -146,8 +168,10 @@
             "sections": [
                 {
                     "title": "関数",
+                    "section": 1,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "helloは何型でしょう。",
                             "choices": ["int", "str", "float"],
@@ -157,8 +181,10 @@
                 },
                 {
                     "title": "モジュール",
+                    "section": 2,
                     "questions": [
                         {
+                            "question_no": 1,
                             "questionType": 1,
                             "question": "helloは何型でしょう。",
                             "choices": ["int", "str", "float"],
