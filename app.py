@@ -51,14 +51,7 @@ def post():
     args: str = str(request.json['args'])
     try:
         p = subprocess.Popen('py data.py', shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='shift-jis')
-        if args:
-            for n in args.splitlines():
-                p.stdin.write(n)
-                p.stdin.write('\n')
-                p.stdin.flush()
-                out += p.stdout.readline()
-        else:
-            out, err = p.communicate(timeout=5)
+        out, err = p.communicate(timeout=5, input=args)
     except TimeoutExpired as e:
         p.kill()
         print(f'{e = }')

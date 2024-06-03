@@ -1,0 +1,207 @@
+{
+    "questions": [
+        {
+            "question_no": 1,
+            "questionType": 1,
+            "question": "Pythonで変数を定義するためのキーワードはどれですか？",
+            "choices": ["define", "var", "なし（変数名を直接書く）"],
+            "answer": 2
+        },
+        {
+            "question_no": 2,
+            "questionType": 1,
+            "question": "変数名として使用できるのはどれですか？",
+            "choices": ["2var", "_var2", "var-2"],
+            "answer": 1
+        },
+        {
+            "question_no": 3,
+            "questionType": 1,
+            "question": "次の変数のうち、正しい変数名はどれですか？",
+            "choices": ["my-var", "my_var", "my var"],
+            "answer": 1
+        },
+        {
+            "question_no": 4,
+            "questionType": 1,
+            "question": "次の変数の初期化のうち、正しいものはどれですか？",
+            "choices": ["5 = x", "x = 5", "x == 5"],
+            "answer": 1
+        },
+        {
+            "question_no": 5,
+            "questionType": 1,
+            "question": "次のうち、変数の値を文字列にする方法として正しいのはどれですか？",
+            "choices": ["str(x)", "int(x)", "float(x)"],
+            "answer": 0
+        },
+        {
+            "question_no": 6,
+            "questionType": 1,
+            "question": "変数xの値が10であるとき、次のうち正しい変数の値の更新はどれですか？",
+            "choices": ["x = x + 1", "x == x + 1", "x - 1 = x"],
+            "answer": 0
+        },
+        {
+            "question_no": 7,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `x = 5` `print(x)`",
+            "choices": ["5", "x", "エラー"],
+            "answer": 0
+        },
+        {
+            "question_no": 8,
+            "questionType": 1,
+            "question": "次のうち、変数の値を整数にする方法として正しいのはどれですか？",
+            "choices": ["str(x)", "int(x)", "float(x)"],
+            "answer": 1
+        },
+        {
+            "question_no": 9,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = \"hello\"` `print(x + \" world\")`",
+            "choices": ["hello", "hello world", "エラー"],
+            "answer": 1
+        },
+        {
+            "question_no": 10,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = 5` `y = 2` `print(x * y)`",
+            "choices": ["7", "10", "エラー"],
+            "answer": 1
+        },
+        {
+            "question_no": 11,
+            "questionType": 1,
+            "question": "次の変数名のうち、正しいものはどれですか？",
+            "choices": ["class", "3variable", "variable3"],
+            "answer": 2
+        },
+        {
+            "question_no": 12,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = 10` `x = x + 5` `print(x)`",
+            "choices": ["10", "5", "15"],
+            "answer": 2
+        },
+        {
+            "question_no": 13,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = 5` `y = x` `x = 10` `print(y)`",
+            "choices": ["5", "10", "エラー"],
+            "answer": 0
+        },
+        {
+            "question_no": 14,
+            "questionType": 1,
+            "question": "次の変数の型は何ですか？ `x = 3.14`",
+            "choices": ["int", "float", "str"],
+            "answer": 1
+        },
+        {
+            "question_no": 15,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = \"5\"` `y = int(x)` `print(y)`",
+            "choices": ["5", "\"5\"", "エラー"],
+            "answer": 0
+        },
+        {
+            "question_no": 16,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = 5` `y = \"3\"` `print(x + int(y))`",
+            "choices": ["8", "53", "エラー"],
+            "answer": 0
+        },
+        {
+            "question_no": 17,
+            "questionType": 1,
+            "question": "次の変数の初期化のうち、正しいものはどれですか？",
+            "choices": ["`x: int = 5`", "`int x = 5`", "`x : 5`"],
+            "answer": 0
+        },
+        {
+            "question_no": 18,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = 5` `y = x` `x = y + 2` `print(x)`",
+            "choices": ["5", "7", "エラー"],
+            "answer": 1
+        },
+        {
+            "question_no": 19,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = \"Hello\"` `y = \"World\"` `print(x + \" \" + y)`",
+            "choices": ["Hello World", "HelloWorld", "エラー"],
+            "answer": 0
+        },
+        {
+            "question_no": 20,
+            "questionType": 1,
+            "question": "次の変数の型は何ですか？ `x = True`",
+            "choices": ["int", "float", "bool"],
+            "answer": 2
+        },
+        {
+            "question_no": 21,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = \"10\"` `print(int(x) + 5)`",
+            "choices": ["15", "105", "エラー"],
+            "answer": 0
+        },
+        {
+            "question_no": 22,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = 10` `y = 3` `print(x // y)`",
+            "choices": ["3.333", "3", "3.0"],
+            "answer": 1
+        },
+        {
+            "question_no": 23,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = \"Python\"` `y = 3` `print(x * y)`",
+            "choices": ["PythonPythonPython", "Python3", "エラー"],
+            "answer": 0
+        },
+        {
+            "question_no": 24,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = 7` `y = 2` `print(x % y)`",
+            "choices": ["1", "3.5", "0"],
+            "answer": 0
+        },
+        {
+            "question_no": 25,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = 5` `print(x > 3)`",
+            "choices": ["True", "False", "エラー"],
+            "answer": 0
+        },
+        {
+            "question_no": 26,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = \"5\"` `y = \"2\"` `print(x + y)`",
+            "choices": ["7", "52", "エラー"],
+            "answer": 1
+        },
+        {
+            "question_no": 27,
+            "questionType": 1,
+            "question": "次の変数の型は何ですか？ `x = [1, 2, 3]`",
+            "choices": ["list", "tuple", "dict"],
+            "answer": 0
+        },
+        {
+            "question_no": 28,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = [1, 2, 3]` `print(x[1])`",
+            "choices": ["1", "2", "3"],
+            "answer": 1
+        },
+        {
+            "question_no": 29,
+            "questionType": 1,
+            "question": "次のコードの結果は何ですか？ `x = {\"a\": 1, \"b\": 2}` `print(x[\"b\"])`",
+            "choices": ["b", "1", "2"],
+            "answer": 2
+        }
+    ]
+}

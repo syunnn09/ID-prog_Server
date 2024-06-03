@@ -2,7 +2,7 @@
     "studies": [
         {
             "id": 1,
-            "title": "数値・文字列",
+            "title": "変数",
             "sections": [
                 {
                     "title": "数値",
@@ -44,8 +44,8 @@
                         {
                             "question_no": 1,
                             "questionType": 1,
-                            "question": "変数の定義として正しいのはどれでしょう。",
-                            "choices": ["i = 3", "str", "float"],
+                            "question": "次の変数の初期化のうち、正しいものはどれですか？",
+                            "choices": ["5 = x", "x = 5", "x == 5"],
                             "answer": 1
                         },
                         {
@@ -54,6 +54,27 @@
                             "question": "変数を利用するメリットはどれでしょう。",
                             "choices": ["繰り返し利用ができる", "可読性の向上", "保守性の向上", "すべて"],
                             "answer": 3
+                        },
+                        {
+                            "question_no": 3,
+                            "questionType": 1,
+                            "question": "次のコードの出力は何ですか？ <br><code>x = 5<br>print(x)</code>",
+                            "choices": ["5", "x", "エラー"],
+                            "answer": 0
+                        },
+                        {
+                            "question_no": 4,
+                            "questionType": 1,
+                            "question": "次のコードの結果は何ですか？ <br><code>x = \"hello\"<br>print(x + \" world\")</code>",
+                            "choices": ["hello", "hello world", "エラー"],
+                            "answer": 1
+                        },
+                        {
+                            "question_no": 5,
+                            "questionType": 1,
+                            "question": "次のコードの結果は何ですか？ <br><code>x = \"Python\"<br>y = 3<br>print(x * y)</code>",
+                            "choices": ["PythonPythonPython", "Python3", "エラー"],
+                            "answer": 0
                         }
                     ]
                 }
@@ -173,8 +194,36 @@
                         {
                             "question_no": 1,
                             "questionType": 1,
-                            "question": "helloは何型でしょう。",
-                            "choices": ["int", "str", "float"],
+                            "question": "Pythonで関数を定義するためのキーワードはどれですか？",
+                            "choices": ["define", "function", "def"],
+                            "answer": 2
+                        },
+                        {
+                            "question_no": 2,
+                            "questionType": 1,
+                            "question": "引数を持たない関数を定義するにはどのように書きますか？",
+                            "choices": ["def func():", "def func:", "function func()"],
+                            "answer": 0
+                        },
+                        {
+                            "question_no": 3,
+                            "questionType": 1,
+                            "question": "返り値のある関数を定義するために使用されるキーワードはどれですか？",
+                            "choices": ["yield", "return", "giveback"],
+                            "answer": 1
+                        },
+                        {
+                            "question_no": 4,
+                            "questionType": 1,
+                            "question": "次のうち、無名関数を定義するために使うキーワードはどれですか？",
+                            "choices": ["def", "lambda", "func"],
+                            "answer": 1
+                        },
+                        {
+                            "question_no": 5,
+                            "questionType": 1,
+                            "question": "filter()関数は何を行いますか？",
+                            "choices": ["リストの要素を並び替える", "条件に合う要素だけを抽出する", "リストの要素を変換する"],
                             "answer": 1
                         }
                     ]

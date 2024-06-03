@@ -1,0 +1,214 @@
+{
+    "questions": [
+        {
+            "question_no": 1,
+            "questionType": 1,
+            "question": "Pythonで関数を定義するためのキーワードはどれですか？",
+            "choices": ["define", "function", "def"],
+            "answer": 2
+        },
+        {
+            "question_no": 2,
+            "questionType": 1,
+            "question": "引数を持たない関数を定義するにはどのように書きますか？",
+            "choices": ["def func():", "def func:", "function func()"],
+            "answer": 0
+        },
+        {
+            "question_no": 3,
+            "questionType": 1,
+            "question": "返り値のある関数を定義するために使用されるキーワードはどれですか？",
+            "choices": ["yield", "return", "giveback"],
+            "answer": 1
+        },
+        {
+            "question_no": 4,
+            "questionType": 1,
+            "question": "次のうち、無名関数を定義するために使うキーワードはどれですか？",
+            "choices": ["def", "lambda", "func"],
+            "answer": 1
+        },
+        {
+            "question_no": 5,
+            "questionType": 1,
+            "question": "可変長引数を取る関数を定義するには、どの記号を使いますか？",
+            "choices": ["*", "#", "&"],
+            "answer": 0
+        },
+        {
+            "question_no": 6,
+            "questionType": 1,
+            "question": "キーワード引数を関数に渡すとき、正しい形式はどれですか？",
+            "choices": ["func(1, 2)", "func(arg1=1, arg2=2)", "func(arg1:1, arg2:2)"],
+            "answer": 1
+        },
+        {
+            "question_no": 7,
+            "questionType": 1,
+            "question": "デフォルト引数を持つ関数の定義はどれですか？",
+            "choices": ["def func(arg=1):", "def func(arg:1):", "def func(arg=default):"],
+            "answer": 0
+        },
+        {
+            "question_no": 8,
+            "questionType": 1,
+            "question": "関数のドキュメンテーション文字列を記述するのに使用するのはどれですか？",
+            "choices": ["コメント (#)", "文字列リテラル (\"\"\" ... \"\"\")", "ダブルクォート (\"\")"],
+            "answer": 1
+        },
+        {
+            "question_no": 9,
+            "questionType": 1,
+            "question": "関数を呼び出す際に、引数をタプルとして渡す方法はどれですか？",
+            "choices": ["func(*args)", "func(args*)", "func(&args)"],
+            "answer": 0
+        },
+        {
+            "question_no": 10,
+            "questionType": 1,
+            "question": "*argsと**kwargsの違いは何ですか？",
+            "choices": ["*argsはキーワード引数、**kwargsは位置引数", "*argsは位置引数、**kwargsはキーワード引数", "*argsはオプション引数、**kwargsは必須引数"],
+            "answer": 1
+        },
+        {
+            "question_no": 11,
+            "questionType": 1,
+            "question": "再帰関数とは何ですか？",
+            "choices": ["自分自身を呼び出す関数", "他の関数を呼び出す関数", "無限ループを持つ関数"],
+            "answer": 0
+        },
+        {
+            "question_no": 12,
+            "questionType": 1,
+            "question": "関数内でグローバル変数を変更するには、どのキーワードを使用しますか？",
+            "choices": ["local", "global", "modify"],
+            "answer": 1
+        },
+        {
+            "question_no": 13,
+            "questionType": 1,
+            "question": "関数内でネストされた関数を定義することは可能ですか？",
+            "choices": ["はい", "いいえ", "Pythonのバージョンによる"],
+            "answer": 0
+        },
+        {
+            "question_no": 14,
+            "questionType": 1,
+            "question": "関数の引数に型ヒントを付ける方法はどれですか？",
+            "choices": ["def func(arg: int) -> int:", "def func(arg int) -> int:", "def func(arg: int): -> int"],
+            "answer": 0
+        },
+        {
+            "question_no": 15,
+            "questionType": 1,
+            "question": "デコレータとは何ですか？",
+            "choices": ["関数を引数として受け取る関数", "HTMLのタグ", "特殊な文字列"],
+            "answer": 0
+        },
+        {
+            "question_no": 16,
+            "questionType": 1,
+            "question": "map()関数の役割は何ですか？",
+            "choices": ["リストの要素をマップに変換する", "関数をリストの各要素に適用する", "関数を並列に実行する"],
+            "answer": 1
+        },
+        {
+            "question_no": 17,
+            "questionType": 1,
+            "question": "filter()関数は何を行いますか？",
+            "choices": ["リストの要素を並び替える", "条件に合う要素だけを抽出する", "リストの要素を変換する"],
+            "answer": 1
+        },
+        {
+            "question_no": 18,
+            "questionType": 1,
+            "question": "ジェネレータ関数の定義に使われるキーワードはどれですか？",
+            "choices": ["return", "yield", "generate"],
+            "answer": 1
+        },
+        {
+            "question_no": 19,
+            "questionType": 1,
+            "question": "デコレータは関数にどのように適用しますか？",
+            "choices": ["@decorator", "#decorator", "*decorator"],
+            "answer": 0
+        },
+        {
+            "question_no": 20,
+            "questionType": 1,
+            "question": "再帰関数のベースケースとは何ですか？",
+            "choices": ["無限ループ", "再帰呼び出しの停止条件", "最初の関数呼び出し"],
+            "answer": 1
+        },
+        {
+            "question_no": 21,
+            "questionType": 1,
+            "question": "クロージャとは何ですか？",
+            "choices": ["関数の中で定義され、外部のスコープを参照する関数", "デコレータの一種", "グローバル変数を使用する関数"],
+            "answer": 0
+        },
+        {
+            "question_no": 22,
+            "questionType": 1,
+            "question": "zip()関数の役割は何ですか？",
+            "choices": ["ファイルを圧縮する", "イテラブルを組み合わせる", "リストを反転する"],
+            "answer": 1
+        },
+        {
+            "question_no": 23,
+            "questionType": 1,
+            "question": "reduce()関数はどのモジュールに含まれていますか？",
+            "choices": ["math", "functools", "operator"],
+            "answer": 1
+        },
+        {
+            "question_no": 24,
+            "questionType": 1,
+            "question": "可変長引数の関数を呼び出す際の正しい構文はどれですか？",
+            "choices": ["func(*args, **kwargs)", "func(args*, kwargs**)", "func(args, kwargs)"],
+            "answer": 0
+        },
+        {
+            "question_no": 25,
+            "questionType": 1,
+            "question": "関数の中で新しいローカル変数を作成するにはどうしますか？",
+            "choices": ["globalキーワードを使う", "localキーワードを使う", "変数を直接代入する"],
+            "answer": 2
+        },
+        {
+            "question_no": 26,
+            "questionType": 1,
+            "question": "ジェネレータを関数として定義するにはどのキーワードを使いますか？",
+            "choices": ["def", "yield", "generate"],
+            "answer": 1
+        },
+        {
+            "question_no": 27,
+            "questionType": 1,
+            "question": "高階関数とは何ですか？",
+            "choices": ["関数の中で使われる変数", "他の関数を引数として受け取る関数", "再帰的な関数"],
+            "answer": 1
+        },
+        {
+            "question_no": 28,
+            "questionType": 1,
+            "question": "isinstance()関数の役割は何ですか？",
+            "choices": ["オブジェクトの型を返す", "オブジェクトが特定の型かどうかをチェックする", "新しいインスタンスを作成する"],
+            "answer": 1
+        },
+        {
+            "question_no": 29,
+            "questionType": 1,
+            "question": "eval()関数の使用にはどのようなリスクがありますか？",
+            "choices": ["パフォーマンスが低下する", "セキュリティリスクがある", "メモリリークが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 30,
+            "questionType": 1,
+            "question": "Pythonでの関数の名前空間に関する説明として正しいものはどれですか？",
+            "choices": ["関数内で定義された変数はすべてグローバル名前空間に属する", "関数内で定義された変数はその関数のローカル名前空間に属する", "名前空間はPythonには存在しない"],
+            "answer": 1
+        }
+    ]
+}
