@@ -1,5 +1,6 @@
 from flask import Flask, request, redirect
 from flask_cors import CORS
+from subprocess import TimeoutExpired
 import subprocess
 import json
 
@@ -12,7 +13,7 @@ cors = CORS(app, resources={r'/*': {'origins': 'http://localhost:5173'}})
 count = 0
 
 def write(data):
-    with open('data.py', 'w', encoding='shift-jis') as f:
+    with open('data.py', 'w', encoding='utf-8') as f:
         f.write(data)
 
 @app.route('/')
@@ -46,18 +47,28 @@ def post():
     write(request.json['data'])
     out = ''
     err = ''
-    utils.check(request)
+    # utils.check(request)
+    args: str = str(request.json['args'])
     try:
-        args = request.json['args']
-        ret = subprocess.run('py data.py', input=args, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=5, encoding="shift-jis")
-        out = ret.stdout
-        if ret.stderr:
-            err = ret.stderr
+        p = subprocess.Popen('py data.py', shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='shift-jis')
+        if args:
+            for n in args.splitlines():
+                p.stdin.write(n)
+                p.stdin.write('\n')
+                p.stdin.flush()
+                out += p.stdout.readline()
+        else:
+            out, err = p.communicate(timeout=5)
+    except TimeoutExpired as e:
+        p.kill()
+        print(f'{e = }')
+        err = str(e)
+        err = err.replace('py data.py', 'main.py')
     except Exception as e:
         print(f'{e = }')
         err = e
     out = utils.replace_text(out)
-    err = utils.replace_text(err)
+    err = utils.replace_text(str(err))
     return {
         'res': out,
         'err': err
