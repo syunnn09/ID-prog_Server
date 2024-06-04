@@ -1,0 +1,214 @@
+{
+    "questions": [
+        {
+            "question_no": 1,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>if x > 5:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 2,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 3<br>if x > 5:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 3,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 5<br>if x == 5:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 4,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 5<br>if x != 5:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 5,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>if x >= 10:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 6,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>if x <= 5:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 7,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>if x < 5:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 8,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = \"hello\"<br>if x == \"hello\":<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 9,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = \"hello\"<br>if x == \"world\":<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 10,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = True<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 11,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = False<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 12,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = None<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 13,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 0<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 14,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 1<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 15,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = -1<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 16,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = [1, 2, 3]<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 17,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = []<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 18,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = \"\"<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 19,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = \" \"<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 20,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = {\"key\": \"value\"}<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 21,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = {}<br>if x:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 22,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>if x > 5 and x < 15:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 23,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>if x > 5 or x < 5:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 24,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>if not x < 5:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 25,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>y = 20<br>if x < 5 or y > 15:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 26,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>y = 20<br>if x > 5 and y < 15:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        },
+        {
+            "question_no": 27,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>y = 20<br>if x > 5 and y > 15:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 28,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>y = 20<br>if x < 5 or y < 15:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 29,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>y = 20<br>if x > 5 and y == 20:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 0
+        },
+        {
+            "question_no": 30,
+            "questionType": 1,
+            "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>y = 20<br>if x > 5 and y != 20:<br>    print(\"A\")<br>else:<br>    print(\"B\")</code>",
+            "choices": ["\"A\"", "\"B\"", "エラーが発生する"],
+            "answer": 1
+        }
+    ]
+}

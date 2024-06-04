@@ -1,0 +1,214 @@
+{
+    "questions": [
+        {
+            "question_no": 1,
+            "questionType": 1,
+            "question": "次のうち、forループを使って0から4までの数値を出力する正しいコードはどれですか？<br>&emsp;<code>a. for i in range(5): print(i)<br>b. for i in range(4): print(i)<br>c. for i in range(1, 5): print(i)</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 2,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(3): print(i)`<br>&emsp;<code>a. 1 2 3<br>b. 0 1 2<br>c. 0 1 2 3</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 3,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(2, 5): print(i)`<br>&emsp;<code>a. 2 3 4<br>b. 2 3 4 5<br>c. 3 4 5</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 4,
+            "questionType": 1,
+            "question": "次のうち、whileループを使って5回\"Hello\"を出力する正しいコードはどれですか？<br>&emsp;<code>a. count = 5 while count > 0: print(\"Hello\")<br>b. count = 0 while count < 5: print(\"Hello\"); count += 1<br>c. count = 0 while count <= 5: print(\"Hello\"); count += 1</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 5,
+            "questionType": 1,
+            "question": "次のうち、無限ループになるコードはどれですか？<br>&emsp;<code>a. while True: pass<br>b. for i in range(10): pass<br>c. while False: pass</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 6,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(1, 10, 2): print(i)`<br>&emsp;<code>a. 1 2 3 4 5 6 7 8 9<br>b. 1 3 5 7 9<br>c. 2 4 6 8 10</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 7,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `i = 0 while i < 3: print(i); i += 1`<br>&emsp;<code>a. 1 2 3<br>b. 0 1 2<br>c. 0 1 2 3</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 8,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(3): for j in range(2): print(i, j)`<br>&emsp;<code>a. 0 0 0 1 1 0 1 1 2 0 2 1<br>b. 0 1 0 2 1 1 2 2<br>c. 0 0 1 1 2 2</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 9,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in \"abc\": print(i)`<br>&emsp;<code>a. a b c<br>b. abc<br>c. c b a</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 10,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(3): print(\"Python\")`<br>&emsp;<code>a. Python<br>b. Python Python<br>c. Python Python Python</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 11,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in [1, 2, 3]: print(i)`<br>&emsp;<code>a. 1 2 3<br>b. 1, 2, 3<br>c. [1, 2, 3]</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 12,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `i = 1 while i < 4: i += 1 print(i)`<br>&emsp;<code>a. 1 2 3<br>b. 2 3 4<br>c. 1 2 3 4</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 13,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(3, -1, -1): print(i)`<br>&emsp;<code>a. 3 2 1<br>b. 3 2 1 0<br>c. 0 1 2 3</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 14,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `i = 0 while i < 5: if i == 3: break print(i) i += 1`<br>&emsp;<code>a. 0 1 2<br>b. 0 1 2 3<br>c. 0 1 2 3 4</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 15,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(4): if i == 2: continue print(i)`<br>&emsp;<code>a. 0 1 2 3<br>b. 0 1 3<br>c. 1 2 3</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 16,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(2): for j in range(2): if j == 1: break print(i, j)`<br>&emsp;<code>a. 0 0 1 0 1 1<br>b. 0 0 1 0 1<br>c. 0 0 1 0</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 17,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(2): for j in range(2): if j == 1: continue print(i, j)`<br>&emsp;<code>a. 0 0 1 0 1<br>b. 0 0 1 1 0 1 1<br>c. 0 0 1 0 1 1</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 18,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `count = 0 while count < 4: print(count) count += 2`<br>&emsp;<code>a. 0 1 2 3<br>b. 0 2<br>c. 0 2 4</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 19,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(3): for j in \"ab\": print(i, j)`<br>&emsp;<code>a. 0 a 0 b 1 a 1 b 2 a 2 b<br>b. a b a b a b<br>c. 0 a 1 a 2 a</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 20,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(2): for j in range(2): print(i + j)`<br>&emsp;<code>a. 0 1 1 2<br>b. 0 1 1 2 0 1 1 2<br>c. 0 1 1 2</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 21,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(3): for j in range(i): print(j)`<br>&emsp;<code>a. 0 0 1 0 1 2<br>b. 0 1 2 3<br>c. 0 0 1 1 2 2</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 2
+        },
+        {
+            "question_no": 22,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `i = 0 while i < 3: i += 1 if i == 2: continue print(i)`<br>&emsp;<code>a. 1 2 3<br>b. 1 3<br>c. 0 1 3</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 23,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(3): if i == 1: break print(i)`<br>&emsp;<code>a. 0 1 2<br>b. 0 1<br>c. 0</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 24,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in \"hello\": if i == \"l\": break print(i)`<br>&emsp;<code>a. h e l<br>b. h e<br>c. h</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 25,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `i = 5 while i > 0: i -= 1 print(i)`<br>&emsp;<code>a. 4 3 2 1 0<br>b. 5 4 3 2 1<br>c. 5 4 3 2 1 0</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 26,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `i = 1 while i < 5: print(i) i *= 2`<br>&emsp;<code>a. 1 2 4<br>b. 1 2 4 8<br>c. 1 2</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 27,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(2): for j in range(3): if j == 2: break print(i, j)`<br>&emsp;<code>a. 0 0 0 1 1 0 1 1 2 0 2 1<br>b. 0 0 0 1 1 1<br>c. 0 0 1 1</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 2
+        },
+        {
+            "question_no": 28,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(3): print(i) else: print(\"Done\")`<br>&emsp;<code>a. 0 1 2 Done<br>b. 0 1 2<br>c. Done</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        },
+        {
+            "question_no": 29,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `for i in range(3): if i == 2: continue print(i) else: print(\"Done\")`<br>&emsp;<code>a. 0 1 Done<br>b. 0 1 2 Done<br>c. 0 1</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 1
+        },
+        {
+            "question_no": 30,
+            "questionType": 1,
+            "question": "次のコードの出力は何ですか？ `i = 0 while i < 4: if i == 2: break print(i) i += 1 else: print(\"Done\")`<br>&emsp;<code>a. 0 1 Done<br>b. 0 1<br>c. 0 1 2 Done</code>",
+            "choices": ["a", "b", "c"],
+            "answer": 0
+        }
+    ]
+}
