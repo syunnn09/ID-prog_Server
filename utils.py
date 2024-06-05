@@ -1,3 +1,4 @@
+import math
 import json
 from flask.wrappers import Request
 
@@ -16,15 +17,39 @@ def getStudies() -> list[dict]:
 
     return studyTitles
 
-temp_progress = [15, 30, 75, 100]
+def get_total_questions() -> list[int]:
+    questions = []
+    for i, study in enumerate(data['studies']):
+        questions.append(0)
+        for section in study['sections']:
+            questions[i] += len(section['questions'])
+    return questions
 
-def set_progress(user: int) -> list[dict]:
+def parse_clear_data(clear_data: list[tuple[int]], studies) -> list[int]:
+    questions = [0 for _ in range(studies)]
+    for clear in clear_data:
+        _id, _, _ = clear
+        questions[_id-1] += 1
+    return questions
+
+def get_progress(user: str) -> list[int]:
+    questions = get_total_questions()
+    clear_data = dbutils.get_all_clear(user)
+    clears = parse_clear_data(clear_data, len(questions))
+    progress = []
+    for question, clear in zip(questions, clears):
+        progress.append(math.floor((clear / question) * 100))
+    return progress
+
+def set_progress(user: str) -> list[dict]:
     ret = []
+    progress = get_progress(user)
     for i, study in enumerate(getStudies()):
         item = study.copy()
-        item['progress'] = temp_progress[i]
+        item['progress'] = progress[i]
         ret.append(item)
     return ret
+
 
 def add_clear_data(study: dict, clear_data: any) -> dict:
     ret = study.copy()
@@ -40,8 +65,10 @@ def get_detail_data(user: int, _id: int) -> dict:
             return add_clear_data(study, clear_data)
     return None
 
+
 def replace_text(text: str) -> str:
     return text.replace('\n', '<br>').replace(' ', '&nbsp;').replace('\t', '&emsp;')
+
 
 def check(request: Request):
     data: str = request.json['data']
@@ -52,15 +79,13 @@ def check(request: Request):
         return count == count2
     return True
 
+
 def check_detail(request: Request):
     res = request.get_json('data') is not None
     res = res and request.get_json('user') is not None
     return res
 
-def get_uid(user: str) -> str:
-    user_obj = json.loads(user)
-    return user_obj['uid']
 
 if __name__ == '__main__':
-    print(set_progress(1))
+    print(get_progress('cJ2HzFoEExXyHZr7yzQMWv0OOHe2'))
     # print(getStudies())

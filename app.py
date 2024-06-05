@@ -23,7 +23,7 @@ def index():
 @app.route('/question/solve', methods=['POST'])
 def solve():
     try:
-        uid = utils.get_uid(request.json['user'])
+        uid = request.json['user']
         id = json.loads(request.json['id'])
         section = int(request.json['section'])
         question_no = int(request.json['question_no'])
@@ -41,9 +41,6 @@ def solve():
 
 @app.route('/post', methods=['GET', 'POST'])
 def post():
-    if request.json['user']:
-        with open('user.json', 'w') as f:
-            f.write(json.dumps(request.json['user'], indent=4))
     write(request.json['data'])
     out = ''
     err = ''
@@ -78,14 +75,15 @@ def login():
 
 @app.route('/api/data', methods=['POST'])
 def get_data():
-    return json.dumps(utils.set_progress(1))
+    uid = request.json['user']
+    return json.dumps(utils.set_progress(uid))
 
 @app.route('/api/getDetail', methods=['POST'])
 def get_detail_data():
     if not utils.check_detail(request):
         return None
     _id = int(request.json['id'])
-    uid = utils.get_uid(request.json['user'])
+    uid = request.json['user']
     return json.dumps(utils.get_detail_data(uid, _id))
 
 app.run('localhost', 55555, debug=False)

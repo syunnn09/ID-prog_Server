@@ -3,7 +3,7 @@ import sqlite3
 conn = sqlite3.connect('data.db', check_same_thread=False)
 cur = conn.cursor()
 
-def solve(uid: str, id: int, section: int, question_no: int):
+def solve(uid: str, id: int, section: int, question_no: int) -> None:
     try:
         sql = 'INSERT INTO clear(uid, id, section, question_no) VALUES(?, ?, ?, ?)'
         cur.execute(sql, (uid, id, section, question_no, ))
@@ -11,7 +11,12 @@ def solve(uid: str, id: int, section: int, question_no: int):
     except Exception as e:
         raise Exception(e)
 
-def get_clear(user: str, id: int):
+def get_clear(user: str, id: int) -> list[tuple[int]]:
     sql = 'SELECT section, question_no FROM clear WHERE uid=? AND id=?'
     cur.execute(sql, (user, id, ))
+    return cur.fetchall()
+
+def get_all_clear(user: str) -> list[tuple[int]]:
+    sql = 'SELECT id, section, question_no FROM clear WHERE uid=?'
+    cur.execute(sql, (user, ))
     return cur.fetchall()

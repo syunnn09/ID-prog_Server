@@ -11,16 +11,16 @@
                         {
                             "question_no": 1,
                             "questionType": 1,
-                            "question": "掛け算した結果を表示しているプログラムはどれですか？",
-                            "choices": ["print(3 * 3)", "print(3 ** 3)", "print(3 / 3)"],
+                            "question": "123は何型ですか？",
+                            "choices": ["int", "str", "float"],
                             "answer": 0,
                             "code": false
                         },
                         {
                             "question_no": 2,
                             "questionType": 1,
-                            "question": "123は何型ですか？",
-                            "choices": ["int", "str", "float"],
+                            "question": "掛け算した結果を表示しているプログラムはどれですか？",
+                            "choices": ["print(3 * 3)", "print(3 ** 3)", "print(3 / 3)"],
                             "answer": 0,
                             "code": false
                         }
@@ -343,8 +343,40 @@
                         {
                             "question_no": 1,
                             "questionType": 1,
-                            "question": "helloは何型でしょう。",
-                            "choices": ["int", "str", "float"],
+                            "question": "数値計算に特化したPythonモジュールはどれですか？",
+                            "choices": ["Flask", "Django", "NumPy"],
+                            "answer": 2,
+                            "code": false
+                        },
+                        {
+                            "question_no": 2,
+                            "questionType": 1,
+                            "question": "データフレームを扱うためのモジュールはどれですか？",
+                            "choices": ["Pygame", "NumPy", "Pandas"],
+                            "answer": 2,
+                            "code": false
+                        },
+                        {
+                            "question_no": 3,
+                            "questionType": 1,
+                            "question": "HTTPリクエストを送信するためのモジュールはどれですか？",
+                            "choices": ["PyTorch", "Matplotlib", "Requests"],
+                            "answer": 2,
+                            "code": false
+                        },
+                        {
+                            "question_no": 4,
+                            "questionType": 1,
+                            "question": "ブラウザの自動操作とテストのためのモジュールはどれですか？",
+                            "choices": ["Pandas", "Selenium", "Pillow"],
+                            "answer": 1,
+                            "code": false
+                        },
+                        {
+                            "question_no": 5,
+                            "questionType": 1,
+                            "question": "シンプルな2Dゲームを作成するためのライブラリはどれですか？",
+                            "choices": ["NumPy", "Pygame", "PyTorch"],
                             "answer": 1,
                             "code": false
                         }
