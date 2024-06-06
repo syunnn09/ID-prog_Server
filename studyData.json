@@ -235,9 +235,33 @@
                         {
                             "question_no": 1,
                             "questionType": 1,
-                            "question": "helloは何型でしょう。",
-                            "choices": ["int", "str", "float"],
+                            "question": "リストの要素にアクセスするための正しい方法はどれですか？",
+                            "choices": ["my_list{0}", "my_list[0]", "my_list(0)"],
                             "answer": 1,
+                            "code": false
+                        },
+                        {
+                            "question_no": 2,
+                            "questionType": 1,
+                            "question": "リストの末尾に要素を追加するメソッドはどれですか？",
+                            "choices": ["append()", "add()", "insert()"],
+                            "answer": 0,
+                            "code": false
+                        },
+                        {
+                            "question_no": 3,
+                            "questionType": 1,
+                            "question": "リストの要素数を取得する方法はどれですか？",
+                            "choices": ["count(my_list)", "size(my_list)", "len(my_list)"],
+                            "answer": 2,
+                            "code": false
+                        },
+                        {
+                            "question_no": 4,
+                            "questionType": 1,
+                            "question": "リストの要素が含まれているかどうかを確認する方法はどれですか？",
+                            "choices": ["element in my_list", "my_list.has(element)", "my_list.contains(element)"],
+                            "answer": 0,
                             "code": false
                         }
                     ]
@@ -249,9 +273,49 @@
                         {
                             "question_no": 1,
                             "questionType": 1,
-                            "question": "helloは何型でしょう。",
-                            "choices": ["int", "str", "float"],
+                            "question": "辞書を作成する正しい方法はどれですか？",
+                            "choices": ["dict = [key1: value1, key2: value2]", "dict = {key1: value1, key2: value2}", "dict = (key1: value1, key2: value2)"],
                             "answer": 1,
+                            "code": false
+                        },
+                        {
+                            "question_no": 2,
+                            "questionType": 1,
+                            "question": "辞書からキーの値を取得する方法はどれですか？",
+                            "choices": ["dict.get(key)", "dict.key()", "dict.key"],
+                            "answer": 0,
+                            "code": false
+                        },
+                        {
+                            "question_no": 3,
+                            "questionType": 1,
+                            "question": "存在しないキーに対して`dict.get(key)`を使用すると、何が返されますか？",
+                            "choices": ["None", "KeyError", "0"],
+                            "answer": 0,
+                            "code": false
+                        },
+                        {
+                            "question_no": 4,
+                            "questionType": 1,
+                            "question": "辞書に新しいキーと値を追加する正しい方法はどれですか？",
+                            "choices": ["dict.append({key: value})", "dict.update({key: value})", "dict[key] = value"],
+                            "answer": 2,
+                            "code": false
+                        },
+                        {
+                            "question_no": 5,
+                            "questionType": 1,
+                            "question": "辞書のキーと値を反復する方法はどれですか？",
+                            "choices": ["for key, value in dict", "for key, value in dict.items()", "for key, value in dict.keys()"],
+                            "answer": 1,
+                            "code": false
+                        },
+                        {
+                            "question_no": 6,
+                            "questionType": 1,
+                            "question": "キーが辞書に存在するかどうかを確認する方法はどれですか？",
+                            "choices": ["key in dict", "dict.contains(key)", "dict.has_key(key)"],
+                            "answer": 0,
                             "code": false
                         }
                     ]
@@ -263,10 +327,34 @@
                         {
                             "question_no": 1,
                             "questionType": 1,
-                            "question": "helloは何型でしょう。",
-                            "choices": ["int", "str", "float"],
+                            "question": "タプルを作成するにはどの構文を使用しますか？",
+                            "choices": ["tuple = [1, 2, 3]", "tuple = (1, 2, 3)", "tuple = {1, 2, 3}"],
                             "answer": 1,
                             "code": false
+                        },
+                        {
+                            "question_no": 2,
+                            "questionType": 1,
+                            "question": "タプルの要素を変更することはできますか？",
+                            "choices": ["できる", "できない", "タプルの種類による"],
+                            "answer": 1,
+                            "code": false
+                        },
+                        {
+                            "question_no": 3,
+                            "questionType": 1,
+                            "question": "タプルの特性として誤っているものはどれですか？",
+                            "choices": ["不変である", "順序が保証される", "可変である"],
+                            "answer": 2,
+                            "code": false
+                        },
+                        {
+                            "question_no": 4,
+                            "questionType": 1,
+                            "question": "次のコードの出力は何ですか？<br><code>my_tuple = tuple(\"hello\")<br>print(my_tuple)<br></code>",
+                            "choices": ["('h', 'e', 'l', 'l', 'o')", "['h', 'e', 'l', 'l', 'o']", "\"hello\""],
+                            "answer": 0,
+                            "code": true
                         }
                     ]
                 },
@@ -275,12 +363,28 @@
                     "section": 4,
                     "questions": [
                         {
-                            "question_no": 1,
+                          "question_no": 1,
+                          "questionType": 1,
+                          "question": "set型の特徴として正しいものを選びなさい。",
+                          "choices": ["重複要素を持たない", "順序を保持する", "要素の追加・削除が可能"],
+                          "answer": 0,
+                          "code": false
+                        },
+                        {
+                          "question_no": 2,
+                          "questionType": 1,
+                          "question": "setの初期化方法として正しいものを選びなさい。",
+                          "choices": ["set([1, 2, 3])", "set(1, 2, 3)", "set{1, 2, 3}"],
+                          "answer": 0,
+                          "code": false
+                        },
+                        {
+                            "question_no": 3,
                             "questionType": 1,
-                            "question": "helloは何型でしょう。",
-                            "choices": ["int", "str", "float"],
+                            "question": "次のコードの出力は何ですか？<span>(位置が異なることがあります。)</span><br><code>my_set = set(\"hello\")<br>print(my_set)<br></code>",
+                            "choices": ["{'h', 'e', 'l', 'l', 'o'}", "{'h', 'e', 'l', 'o'}", "'hello'"],
                             "answer": 1,
-                            "code": false
+                            "code": true
                         }
                     ]
                 }
