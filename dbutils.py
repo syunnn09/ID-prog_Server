@@ -20,3 +20,8 @@ def get_all_clear(user: str) -> list[tuple[int]]:
     sql = 'SELECT id, section, question_no FROM clear WHERE uid=?'
     cur.execute(sql, (user, ))
     return cur.fetchall()
+
+def get_section_clear(user: str, id: int, section: int) -> list[tuple[int]]:
+    sql = 'SELECT question_no FROM clear WHERE uid=? AND id=? AND section=?'
+    cur.execute(sql, (user, id, section))
+    return cur.fetchall()

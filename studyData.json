@@ -3,6 +3,7 @@
         {
             "id": 1,
             "title": "変数",
+            "url": "variable",
             "sections": [
                 {
                     "title": "数値",
@@ -91,6 +92,7 @@
         {
             "id": 2,
             "title": "比較・繰り返し",
+            "url": "if-and-for",
             "sections": [
                 {
                     "title": "比較(if文)",
@@ -227,6 +229,7 @@
         {
             "id": 3,
             "title": "配列",
+            "url": "list",
             "sections": [
                 {
                     "title": "list",
@@ -393,6 +396,7 @@
         {
             "id": 4,
             "title": "関数・モジュール",
+            "url": "function",
             "sections": [
                 {
                     "title": "関数",

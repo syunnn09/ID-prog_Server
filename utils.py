@@ -1,5 +1,6 @@
 import math
 import json
+from typing import Any
 from flask.wrappers import Request
 
 import dbutils
@@ -51,20 +52,42 @@ def set_progress(user: str) -> list[dict]:
     return ret
 
 
-def add_clear_data(study: dict, clear_data: any) -> dict:
+def add_clear_data(study: dict, clear_data: Any) -> dict:
     ret = study.copy()
     for data in clear_data:
         section, question_no = data
         ret['sections'][section-1]['questions'][question_no-1]['isCleared'] = True
     return ret
 
-def get_detail_data(user: int, _id: int) -> dict:
-    clear_data = dbutils.get_clear(user, _id)
+def get_study(url: str):
     for study in getStudies():
-        if study['id'] == _id:
-            return add_clear_data(study, clear_data)
+        if study['url'] == url:
+            return study
     return None
 
+def get_detail_data(user: int, url: str) -> dict:
+    study = get_study(url)
+    if study is None:
+        return None
+    clear_data = dbutils.get_clear(user, study['id'])
+    return add_clear_data(study, clear_data)
+
+def add_section_data(study: dict, clear_data: Any) -> dict:
+    ret = study.copy()
+    print(clear_data)
+    for data in clear_data:
+        ret['questions'][data[0]-1]['isCleared'] = True
+    return ret
+
+def get_section_data(uid: str, url: str, section: int):
+    study = get_study(url)
+    if study is None:
+        return None
+    for s in study['sections']:
+        if s['section'] == section:
+            clear_data = dbutils.get_section_clear(uid, study['id'], section)
+            return add_section_data(s, clear_data)
+    return None
 
 def replace_text(text: str) -> str:
     return text.replace('\n', '<br>').replace(' ', '&nbsp;').replace('\t', '&emsp;')
@@ -80,11 +103,16 @@ def check(request: Request):
     return True
 
 
-def check_detail(request: Request):
-    res = request.get_json('data') is not None
+def check_detail(request: Request) -> bool:
+    res = request.get_json('url') is not None
     res = res and request.get_json('user') is not None
     return res
 
+def check_section(request: Request) -> bool:
+    res = request.get_json('url') is not None
+    res = res and request.get_json('section') is not None
+    res = res and request.get_json('user') is not None
+    return res
 
 if __name__ == '__main__':
     print(get_progress('cJ2HzFoEExXyHZr7yzQMWv0OOHe2'))

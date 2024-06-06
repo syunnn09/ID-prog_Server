@@ -82,8 +82,18 @@ def get_data():
 def get_detail_data():
     if not utils.check_detail(request):
         return None
-    _id = int(request.json['id'])
+    url = request.json['url']
     uid = request.json['user']
-    return json.dumps(utils.get_detail_data(uid, _id))
+    return json.dumps(utils.get_detail_data(uid, url))
+
+@app.route('/api/getSection', methods=['POST'])
+def get_section_data():
+    if not utils.check_section(request):
+        return None
+    section = int(request.json['section'])
+    url = request.json['url']
+    uid = request.json['user']
+
+    return json.dumps(utils.get_section_data(uid, url, section))
 
 app.run('localhost', 55555, debug=False)
