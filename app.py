@@ -24,19 +24,19 @@ def index():
 def solve():
     try:
         uid = request.json['user']
-        id = json.loads(request.json['id'])
+        id = int(request.json['id'])
         section = int(request.json['section'])
         question_no = int(request.json['question_no'])
     except Exception as e:
-        print(f'{e = }')
-        return {'status': 'false', 'reason': str(e)}
+        print(f'1: {e = }')
+        return {'status': False, 'reason': str(e)}
 
     try:
         dbutils.solve(uid, id, section, question_no)
     except Exception as e:
-        print(f'{e = }')
-        return {'status': 'false', 'reason': str(e)}
-    return {'status': 'true'}
+        print(f'2: {e = }')
+        return {'status': False, 'reason': str(e)}
+    return {'status': True}
 
 
 @app.route('/post', methods=['GET', 'POST'])

@@ -54,12 +54,13 @@ def set_progress(user: str) -> list[dict]:
 
 def add_clear_data(study: dict, clear_data: Any) -> dict:
     ret = study.copy()
-    for data in clear_data:
-        section, question_no = data
-        ret['sections'][section-1]['questions'][question_no-1]['isCleared'] = True
+    for section in ret['sections']:
+        questions = len(section['questions'])
+        clears = len(list(filter(lambda x: x[0] == section['section'], clear_data)))
+        ret['sections'][section['section']-1]['progress'] = math.floor((clears / questions) * 100)
     return ret
 
-def get_study(url: str):
+def get_study(url: str) -> dict:
     for study in getStudies():
         if study['url'] == url:
             return study
@@ -72,21 +73,21 @@ def get_detail_data(user: int, url: str) -> dict:
     clear_data = dbutils.get_clear(user, study['id'])
     return add_clear_data(study, clear_data)
 
-def add_section_data(study: dict, clear_data: Any) -> dict:
+def add_section_data(study: dict, clear_data: Any, id: int) -> dict:
     ret = study.copy()
-    print(clear_data)
     for data in clear_data:
+        ret['id'] = id
         ret['questions'][data[0]-1]['isCleared'] = True
     return ret
 
-def get_section_data(uid: str, url: str, section: int):
+def get_section_data(uid: str, url: str, section: int) -> dict:
     study = get_study(url)
     if study is None:
         return None
     for s in study['sections']:
         if s['section'] == section:
             clear_data = dbutils.get_section_clear(uid, study['id'], section)
-            return add_section_data(s, clear_data)
+            return add_section_data(s, clear_data, study['id'])
     return None
 
 def replace_text(text: str) -> str:
