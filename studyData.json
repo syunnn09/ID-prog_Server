@@ -7,6 +7,7 @@
             "sections": [
                 {
                     "parent": {
+                        "id": 1,
                         "title": "変数",
                         "url": "variable"
                     },
@@ -33,6 +34,7 @@
                 },
                 {
                     "parent": {
+                        "id": 1,
                         "title": "変数",
                         "url": "variable"
                     },
@@ -51,6 +53,7 @@
                 },
                 {
                     "parent": {
+                        "id": 1,
                         "title": "変数",
                         "url": "variable"
                     },
@@ -101,6 +104,7 @@
                 },
                 {
                     "parent": {
+                        "id": 1,
                         "title": "変数",
                         "url": "variable"
                     },
@@ -110,40 +114,40 @@
                         {
                             "question_no": 1,
                             "questionType": 2,
-                            "question": "二つの数が与えられるので、合計を出力するプログラムを作成してください。",
+                            "question": "<h4>二つの数が与えられるので、合計を出力するプログラムを作成してください。</h4>",
                             "testsCount": 5,
                             "tests": [
                                 {
                                     "input": "1\n2",
-                                    "output": "3"
+                                    "output": "3<br>"
                                 },
                                 {
                                     "input": "13\n5",
-                                    "output": "18"
+                                    "output": "18<br>"
                                 },
                                 {
                                     "input": "5\n0",
-                                    "output": "5"
+                                    "output": "5<br>"
                                 },
                                 {
                                     "input": "-4\n13",
-                                    "output": "9"
+                                    "output": "9<br>"
                                 },
                                 {
                                     "input": "14984928\n938594878",
-                                    "output": "953579806"
+                                    "output": "953579806<br>"
                                 }
                             ]
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "",
                             "testsCount": 5,
                             "tests": [
                                 {
                                     "input": "",
-                                    "output": ""
+                                    "output": "<br>"
                                 }
                             ]
                         }
@@ -158,6 +162,7 @@
             "sections": [
                 {
                     "parent": {
+                        "id": 2,
                         "title": "比較・繰り返し",
                         "url": "if-and-for"
                     },
@@ -208,6 +213,7 @@
                 },
                 {
                     "parent": {
+                        "id": 2,
                         "title": "比較・繰り返し",
                         "url": "if-and-for"
                     },
@@ -258,6 +264,7 @@
                 },
                 {
                     "parent": {
+                        "id": 2,
                         "title": "比較・繰り返し",
                         "url": "if-and-for"
                     },
@@ -300,6 +307,7 @@
                 },
                 {
                     "parent": {
+                        "id": 2,
                         "title": "比較・繰り返し",
                         "url": "if-and-for"
                     },
@@ -309,84 +317,84 @@
                         {
                             "question_no": 1,
                             "questionType": 2,
-                            "question": "与えられた数が偶数か奇数かを判定するプログラムを作成してください。数が偶数の場合は 'Even' を出力し、奇数の場合は 'Odd' を出力してください。",
+                            "question": "<h4>与えられた数が偶数か奇数かを判定するプログラムを作成してください。数が偶数の場合は 'Even' を出力し、奇数の場合は 'Odd' を出力してください。</h4>",
                             "testsCount": 5,
                             "tests": [
                                 {
                                     "input": "2",
-                                    "output": "Even"
+                                    "output": "Even<br>"
                                 },
                                 {
                                     "input": "7",
-                                    "output": "Odd"
+                                    "output": "Odd<br>"
                                 },
                                 {
                                     "input": "0",
-                                    "output": "Even"
+                                    "output": "Even<br>"
                                 },
                                 {
                                     "input": "-4",
-                                    "output": "Even"
+                                    "output": "Even<br>"
                                 },
                                 {
                                     "input": "1337",
-                                    "output": "Odd"
+                                    "output": "Odd<br>"
                                 }
                             ]
                         },                        
                         {
                             "question_no": 2,
                             "questionType": 2,
-                            "question": "与えられた年が閏年かどうかを判定するプログラムを作成してください。閏年の場合はYesを、違う場合はNoを出力してください。閏年の条件は以下の通りです。<br>1. 西暦年が4で割り切れる場合は、閏年です。<br>2. ただし、西暦年が100で割り切れる場合は、閏年ではありません。<br>3. ただし、西暦年が400で割り切れる場合は、閏年です。",
+                            "question": "<h4>与えられた年が閏年かどうかを判定するプログラムを作成してください。閏年の場合はYesを、違う場合はNoを出力してください。</h4><br>閏年の条件は以下の通りです。<br>1. 西暦年が4で割り切れる場合は、閏年です。<br>2. ただし、西暦年が100で割り切れる場合は、閏年ではありません。<br>3. ただし、西暦年が400で割り切れる場合は、閏年です。",
                             "testsCount": 5,
                             "tests": [
                                 {
                                     "input": "2000",
-                                    "output": "Yes"
+                                    "output": "Yes<br>"
                                 },
                                 {
                                     "input": "1900",
-                                    "output": "No"
+                                    "output": "No<br>"
                                 },
                                 {
                                     "input": "2012",
-                                    "output": "Yes"
+                                    "output": "Yes<br>"
                                 },
                                 {
                                     "input": "2100",
-                                    "output": "No"
+                                    "output": "No<br>"
                                 },
                                 {
                                     "input": "2024",
-                                    "output": "Yes"
+                                    "output": "Yes<br>"
                                 }
                             ]
                         },
                         {
                             "question_no": 3,
                             "questionType": 2,
-                            "question": "2つの数が与えられるので、与えられた範囲内のすべての偶数を出力するプログラムを作成してください。<br>最初の数と最後の数は、偶数であることが保証されています。",
+                            "question": "<h4>2つの数が与えられるので、与えられた範囲内のすべての偶数を出力するプログラムを作成してください。</h4><br>最初の数と最後の数は、偶数であることが保証されています。",
                             "testsCount": 5,
                             "tests": [
                                 {
                                     "input": "2\n10",
-                                    "output": "2\n4\n6\n8\n10"
+                                    "output": "2<br>4<br>6<br>8<br>10<br>"
                                 },
                                 {
                                     "input": "-10\n10",
-                                    "output": "-10\n-8\n-6\n-4\n-2\n0\n2\n4\n6\n8\n10"
+                                    "output": "-10<br>-8<br>-6<br>-4<br>-2<br>0<br>2<br>4<br>6<br>8<br>10<br>"
                                 },
                                 {
                                     "input": "10\n30",
-                                    "output": "10\n12\n14\n16\n18\n20\n22\n24\n26\n28\n30"
+                                    "output": "10<br>12<br>14<br>16<br>18<br>20<br>22<br>24<br>26<br>28<br>30<br>"
                                 },
                                 {
                                     "input": "50\n70",
-                                    "output": "50\n52\n54\n56\n58\n60\n62\n64\n66\n68\n70"
+                                    "output": "50<br>52<br>54<br>56<br>58<br>60<br>62<br>64<br>66<br>68<br>70<br>"
                                 },
                                 {
                                     "input": "0\n20",
-                                    "output": "0\n2\n4\n6\n8\n10\n12\n14\n16\n18\n20"
+                                    "output": "0<br>2<br>4<br>6<br>8<br>10<br>12<br>14<br>16<br>18<br>20<br>"
                                 }
                             ]
                         }
@@ -401,6 +409,7 @@
             "sections": [
                 {
                     "parent": {
+                        "id": 3,
                         "title": "配列",
                         "url": "list"
                     },
@@ -443,6 +452,7 @@
                 },
                 {
                     "parent": {
+                        "id": 3,
                         "title": "配列",
                         "url": "list"
                     },
@@ -501,6 +511,7 @@
                 },
                 {
                     "parent": {
+                        "id": 3,
                         "title": "配列",
                         "url": "list"
                     },
@@ -543,6 +554,7 @@
                 },
                 {
                     "parent": {
+                        "id": 3,
                         "title": "配列",
                         "url": "list"
                     },
@@ -577,6 +589,7 @@
                 },
                 {
                     "parent": {
+                        "id": 3,
                         "title": "配列",
                         "url": "list"
                     },
@@ -586,38 +599,30 @@
                         {
                             "question_no": 5,
                             "questionType": 1,
-                            "question": "与えられる数の合計を計算するプログラムを作成してください。<br>1行目に与えられる数字の個数が与えられるので、その後の数の合計を出力してください。<br>また、できるだけlistを使用するようにしてください。",
+                            "question": "<h4>与えられる数の合計を計算するプログラムを作成してください。<br>1行目に与えられる数字の個数が与えられるので、その後の数の合計を出力してください。<br>また、できるだけlistを使用するようにしてください。</h4>",
                             "testsCount": 5,
                             "tests": [
                                 {
                                     "input": "5\n1\n2\n3\n4\n5",
-                                    "output": 15
+                                    "output": "15<br>"
                                 },
                                 {
                                     "input": "6\n-1\n-2\n-3\n-4\n-5\n-6",
-                                    "output": -21
+                                    "output": "-21<br>"
                                 },
                                 {
                                     "input": "5\n251\n94\n60\n-49\n-127",
-                                    "output": 229
+                                    "output": "229<br>"
                                 },
                                 {
                                     "input": "5\n0\n1\n0\n-1\n0",
-                                    "output": 0
+                                    "output": "0<br>"
                                 },
                                 {
                                     "input": "2\n5\n2",
-                                    "output": 7
+                                    "output": "7<br>"
                                 }
                             ]
-                        },
-                        {
-                          "question_no": 2,
-                          "questionType": 1,
-                          "question": "setの初期化方法として正しいものを選びなさい。",
-                          "choices": ["set([1, 2, 3])", "set(1, 2, 3)", "set{1, 2, 3}"],
-                          "answer": 0,
-                          "code": false
                         }
                     ]
                 }
@@ -630,6 +635,7 @@
             "sections": [
                 {
                     "parent": {
+                        "id": 4,
                         "title": "関数・モジュール",
                         "url": "function"
                     },
@@ -680,6 +686,7 @@
                 },
                 {
                     "parent": {
+                        "id": 4,
                         "title": "関数・モジュール",
                         "url": "function"
                     },

@@ -16,7 +16,7 @@ def getStudies() -> list[dict]:
     if studyTitles is None:
         studyTitles = [study for study in data['studies']]
 
-    return studyTitles
+    return studyTitles.copy()
 
 def get_total_questions() -> list[int]:
     questions = []
@@ -46,24 +46,22 @@ def set_progress(user: str) -> list[dict]:
     ret = []
     progress = get_progress(user)
     for i, study in enumerate(getStudies()):
-        item = study.copy()
-        item['progress'] = progress[i]
-        ret.append(item)
+        study['progress'] = progress[i]
+        ret.append(study)
     return ret
 
 
 def add_clear_data(study: dict, clear_data: Any) -> dict:
-    ret = study.copy()
-    for section in ret['sections']:
+    for section in study['sections']:
         questions = len(section['questions'])
         clears = len(list(filter(lambda x: x[0] == section['section'], clear_data)))
-        ret['sections'][section['section']-1]['progress'] = math.floor((clears / questions) * 100)
-    return ret
+        study['sections'][section['section']-1]['progress'] = math.floor((clears / questions) * 100)
+    return study
 
 def get_study(url: str) -> dict:
     for study in getStudies():
         if study['url'] == url:
-            return study
+            return study.copy()
     return None
 
 def get_detail_data(user: int, url: str) -> dict:
@@ -73,12 +71,22 @@ def get_detail_data(user: int, url: str) -> dict:
     clear_data = dbutils.get_clear(user, study['id'])
     return add_clear_data(study, clear_data)
 
-def add_section_data(study: dict, clear_data: Any, id: int) -> dict:
-    ret = study.copy()
-    for data in clear_data:
-        ret['id'] = id
-        ret['questions'][data[0]-1]['isCleared'] = True
+def add_sample_data(ret: dict) -> dict:
+    for question in ret['questions']:
+        question['examples'] = []
+        for test in question['tests'][:2]:
+            test['input'] = test['input'].replace('\n', '<br>')
+            test['output'] = test['output'].replace('\n', '<br>')
+            question['examples'].append(test)
     return ret
+
+def add_section_data(study: dict, clear_data: Any, id: int) -> dict:
+    for data in clear_data:
+        study['id'] = id
+        study['questions'][data[0]-1]['isCleared'] = True
+    if study['title'] == '確認問題':
+        study = add_sample_data(study)
+    return study
 
 def get_section_data(uid: str, url: str, section: int) -> dict:
     study = get_study(url)
@@ -114,6 +122,28 @@ def check_section(request: Request) -> bool:
     res = res and request.get_json('section') is not None
     res = res and request.get_json('user') is not None
     return res
+
+def get_section(study: dict, section: int) -> dict:
+    for s in study['sections']:
+        if s['section'] == section:
+            return s
+    return None
+
+def get_question(section: dict, question_no: int) -> dict:
+    for question in section['questions']:
+        if question['question_no'] == question_no:
+            return question
+    return None
+
+def get_args(request: Request) -> str:
+    url = request.json['url']
+    section = int(request.json['section'])
+    question_no = request.json['question_no']
+    test_no = request.json['test_no']
+    study = get_study(url)
+    section = get_section(study, section)
+    question = get_question(section, question_no)
+    return question['tests'][test_no]
 
 if __name__ == '__main__':
     print(get_progress('cJ2HzFoEExXyHZr7yzQMWv0OOHe2'))
