@@ -1,7 +1,6 @@
+import time
 from flask import Flask, request, redirect
 from flask_cors import CORS
-from subprocess import TimeoutExpired
-import subprocess
 import json
 
 import utils
@@ -48,6 +47,15 @@ def test():
     args = utils.get_args(request)
     result = programHelper.execute(data, args['input'].replace('<br>', '\n'))
     result['correct'] = result['res'] == args['output']
+    return result
+
+@app.route('/prob', methods=['POST'])
+def prob():
+    data = request.json['data']
+    args = utils.get_args(request)
+    result = programHelper.execute(data, args['input'].replace('<br>', '\n'))
+    result['correct'] = result['res'] == args['output']
+    time.sleep(1)
     return result
 
 @app.route('/login', methods=['POST'])

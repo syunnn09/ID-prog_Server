@@ -139,7 +139,7 @@ def get_args(request: Request) -> str:
     url = request.json['url']
     section = int(request.json['section'])
     question_no = request.json['question_no']
-    test_no = request.json['test_no']
+    test_no = int(request.json['test_no'])
     study = get_study(url)
     section = get_section(study, section)
     question = get_question(section, question_no)

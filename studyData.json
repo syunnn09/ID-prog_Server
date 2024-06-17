@@ -82,7 +82,7 @@
                             "question": "次のコードの出力は何ですか？ <br><code>x = 5<br>print(x)</code>",
                             "choices": ["5", "x", "エラー"],
                             "answer": 0,
-                            "code": false
+                            "code": true
                         },
                         {
                             "question_no": 4,
@@ -90,7 +90,7 @@
                             "question": "次のコードの結果は何ですか？ <br><code>x = \"hello\"<br>print(x + \" world\")</code>",
                             "choices": ["hello", "hello world", "エラー"],
                             "answer": 1,
-                            "code": false
+                            "code": true
                         },
                         {
                             "question_no": 5,
@@ -98,7 +98,7 @@
                             "question": "次のコードの結果は何ですか？ <br><code>x = \"Python\"<br>y = 3<br>print(x * y)</code>",
                             "choices": ["PythonPythonPython", "Python3", "エラー"],
                             "answer": 0,
-                            "code": false
+                            "code": true
                         }
                     ]
                 },
@@ -317,7 +317,7 @@
                         {
                             "question_no": 1,
                             "questionType": 2,
-                            "question": "<h4>与えられた数が偶数か奇数かを判定するプログラムを作成してください。数が偶数の場合は 'Even' を出力し、奇数の場合は 'Odd' を出力してください。</h4>",
+                            "question": "<h4>与えられた数が偶数か奇数かを判定するプログラムを作成してください。<br>数が偶数の場合は 'Even' を出力し、奇数の場合は 'Odd' を出力してください。</h4>",
                             "testsCount": 5,
                             "tests": [
                                 {
@@ -373,7 +373,7 @@
                         {
                             "question_no": 3,
                             "questionType": 2,
-                            "question": "<h4>2つの数が与えられるので、与えられた範囲内のすべての偶数を出力するプログラムを作成してください。</h4><br>最初の数と最後の数は、偶数であることが保証されています。",
+                            "question": "<h4>2つの数が与えられるので、与えられた範囲内のすべての偶数を出力するプログラムを作成してください。</h4><br>※最初の数と最後の数は、必ず偶数です。",
                             "testsCount": 5,
                             "tests": [
                                 {
@@ -597,9 +597,9 @@
                     "section": 5,
                     "questions": [
                         {
-                            "question_no": 5,
-                            "questionType": 1,
-                            "question": "<h4>与えられる数の合計を計算するプログラムを作成してください。<br>1行目に与えられる数字の個数が与えられるので、その後の数の合計を出力してください。<br>また、できるだけlistを使用するようにしてください。</h4>",
+                            "question_no": 1,
+                            "questionType": 2,
+                            "question": "<h4>与えられる数の合計を計算するプログラムを作成してください。</h4><br>1行目に与えられる数字の個数が与えられるので、その後の数の合計を出力してください。<br>また、できるだけlistを使用するようにしてください。</h4>",
                             "testsCount": 5,
                             "tests": [
                                 {
