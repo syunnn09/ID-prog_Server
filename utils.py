@@ -13,8 +13,10 @@ studyTitles = None
 def getStudies() -> list[dict]:
     global studyTitles
 
-    if studyTitles is None:
-        studyTitles = [study for study in data['studies']]
+    # if studyTitles is None:
+    with open('./studyData.json', 'r', encoding='utf-8') as f:
+        data = json.loads(f.read())
+    studyTitles = [study for study in data['studies']]
 
     return studyTitles.copy()
 
@@ -55,7 +57,11 @@ def add_clear_data(study: dict, clear_data: Any) -> dict:
     for section in study['sections']:
         questions = len(section['questions'])
         clears = len(list(filter(lambda x: x[0] == section['section'], clear_data)))
-        study['sections'][section['section']-1]['progress'] = math.floor((clears / questions) * 100)
+        if questions:
+            study['sections'][section['section']-1]['progress'] = math.floor((clears / questions) * 100)
+        else:
+            study['sections'][section['section']-1]['progress'] = 0
+
     return study
 
 def get_study(url: str) -> dict:
@@ -99,7 +105,12 @@ def get_section_data(uid: str, url: str, section: int) -> dict:
     return None
 
 def replace_text(text: str) -> str:
-    return text.replace('\n', '<br>').replace(' ', '&nbsp;').replace('\t', '&emsp;')
+    return text \
+            .replace(' ', '&nbsp;') \
+            .replace('\t', '&emsp;') \
+            .replace('<', '&lt;') \
+            .replace('>', '&gt;') \
+            .replace('\n', '<br>')
 
 
 def check(request: Request):

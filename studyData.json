@@ -11,12 +11,41 @@
                         "title": "変数",
                         "url": "variable"
                     },
-                    "title": "数値",
+                    "title": "はじめに",
                     "section": 1,
                     "questions": [
                         {
                             "question_no": 1,
                             "questionType": 1,
+                            "title": "文字を出力してみよう",
+                            "detail": "<p>文字を出力するには\"print\"を使用します。<br><br>Hello Worldを出力してみましょう。<br>出力するには以下のコードをエディターに入力してみましょう。</p><code>print(\"Hello World\")</code><p>入力が出来たら実行ボタンを押して結果を確認してください。"
+                        },
+                        {
+                            "question_no": 2,
+                            "questionType": 1,
+                            "title": "型を理解しよう",
+                            "detail": "<p>Pythonでは数値は\"int型\"、文字列は\"str型\"が使われます。<br>型を調べる場合、\"type\"を使用します。<br>以下のコードを入力して型を確認してみましょう。</p><br><code>print(type(123))<br>print(type(\"Hello\"))</code>"
+                        },
+                        {
+                            "question_no": 3,
+                            "questionType": 1,
+                            "title": "変数を使ってみよう",
+                            "detail": "<p>変数とは数値や文字列などが入る箱と考えてください。<br>以下のコードを実行してみましょう。</p><br><code>i = 20<br>print(i)</code><br><br><p>このコードでは1行目に\"i\"という変数を宣言してその中に20を代入しています。<br>そして2行目に\"i\"を出力しています。<br>iの値を変更して再度実行してみてください。</p>"
+                        }
+                    ]
+                },
+                {
+                    "parent": {
+                        "id": 1,
+                        "title": "変数",
+                        "url": "variable"
+                    },
+                    "title": "数値",
+                    "section": 2,
+                    "questions": [
+                        {
+                            "question_no": 1,
+                            "questionType": 2,
                             "question": "123は何型ですか？",
                             "choices": ["int", "str", "float"],
                             "answer": 0,
@@ -24,7 +53,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "掛け算した結果を表示しているプログラムはどれですか？",
                             "choices": ["print(3 * 3)", "print(3 ** 3)", "print(3 / 3)"],
                             "answer": 0,
@@ -39,11 +68,11 @@
                         "url": "variable"
                     },
                     "title": "文字列",
-                    "section": 2,
+                    "section": 3,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "\"hello\"は何型ですか？",
                             "choices": ["int", "str", "float"],
                             "answer": 1,
@@ -58,11 +87,11 @@
                         "url": "variable"
                     },
                     "title": "変数",
-                    "section": 3,
+                    "section": 4,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次の変数の初期化のうち、正しいものはどれですか？",
                             "choices": ["5 = x", "x = 5", "x == 5"],
                             "answer": 1,
@@ -70,7 +99,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "変数を利用するメリットはどれですか？",
                             "choices": ["繰り返し利用ができる", "可読性の向上", "保守性の向上", "すべて"],
                             "answer": 3,
@@ -78,7 +107,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの出力は何ですか？ <br><code>x = 5<br>print(x)</code>",
                             "choices": ["5", "x", "エラー"],
                             "answer": 0,
@@ -86,7 +115,7 @@
                         },
                         {
                             "question_no": 4,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの結果は何ですか？ <br><code>x = \"hello\"<br>print(x + \" world\")</code>",
                             "choices": ["hello", "hello world", "エラー"],
                             "answer": 1,
@@ -94,7 +123,7 @@
                         },
                         {
                             "question_no": 5,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの結果は何ですか？ <br><code>x = \"Python\"<br>y = 3<br>print(x * y)</code>",
                             "choices": ["PythonPythonPython", "Python3", "エラー"],
                             "answer": 0,
@@ -109,11 +138,11 @@
                         "url": "variable"
                     },
                     "title": "確認問題",
-                    "section": 4,
+                    "section": 5,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 2,
+                            "questionType": 3,
                             "question": "<h4>二つの数が与えられるので、合計を出力するプログラムを作成してください。</h4>",
                             "testsCount": 5,
                             "tests": [
@@ -141,7 +170,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 2,
+                            "questionType": 3,
                             "question": "",
                             "testsCount": 5,
                             "tests": [
@@ -169,9 +198,21 @@
                     "title": "比較(if文)",
                     "section": 1,
                     "questions": [
+
+                    ]
+                },
+                {
+                    "parent": {
+                        "id": 2,
+                        "title": "比較・繰り返し",
+                        "url": "if-and-for"
+                    },
+                    "title": "比較(if文)",
+                    "section": 2,
+                    "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "以下のコードの出力は何ですか？<br><code>x = 5<br>if x == 5:<br>&#0009;print(\"A\")<br>else:<br>&#0009;print(\"B\")</code>",
                             "choices": ["A", "B", "エラーが発生する"],
                             "answer": 0,
@@ -179,7 +220,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "以下のコードの出力は何ですか？<br><code>x = 5<br>if x != 5:<br>&#0009;print(\"A\")<br>else:<br>&#0009;print(\"B\")</code>",
                             "choices": ["A", "B", "エラーが発生する"],
                             "answer": 1,
@@ -187,7 +228,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "以下のコードの出力は何ですか？<br><code>x = 10<br>if x >= 10:<br>&#0009;print(\"A\")<br>else:<br>&#0009;print(\"B\")</code>",
                             "choices": ["A", "B", "エラーが発生する"],
                             "answer": 0,
@@ -195,7 +236,7 @@
                         },
                         {
                             "question_no": 4,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "以下のコードの出力は何ですか？<br><code>x = \"hello\"<br>if x == \"world\":<br>&#0009;print(\"A\")<br>else:<br>&#0009;print(\"B\")</code>",
                             "choices": ["A", "B", "エラーが発生する"],
                             "answer": 1,
@@ -203,7 +244,7 @@
                         },
                         {
                             "question_no": 5,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "以下のコードの出力は何ですか？<br><code>x = True<br>if x:<br>&#0009;print(\"A\")<br>else:<br>&#0009;print(\"B\")</code>",
                             "choices": ["A", "B", "エラーが発生する"],
                             "answer": 0,
@@ -218,11 +259,11 @@
                         "url": "if-and-for"
                     },
                     "title": "繰り返し(while文)",
-                    "section": 2,
+                    "section": 3,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの出力は何ですか？<span>(改行を除く)</span><br><code>i = 0<br>while i < 3:<br>&#0009;print(i)<br>&#0009;i += 1</code>",
                             "choices": ["1 2 3", "0 1 2", "0 1 2 3"],
                             "answer": 1,
@@ -230,7 +271,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの出力は何ですか？<span>(改行を除く)</span><br><code>i = 0<br>while i < 5:<br>&#0009;if i == 3:<br>&#0009;&#0009;break<br>&#0009;print(i)<br>&#0009;i += 1</code>",
                             "choices": ["0 1 2", "0 1 2 3", "0 1 2 4"],
                             "answer": 0,
@@ -238,7 +279,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの出力は何ですか？<span>(改行を除く)</span><br><code>i = 0<br>while i < 5:<br>&#0009;if i == 3:<br>&#0009;&#0009;continue<br>&#0009;print(i)<br>&#0009;i += 1</code>",
                             "choices": ["0 1 2 3 4", "0 1 2 4", "0 1 2 4 5"],
                             "answer": 1,
@@ -246,7 +287,7 @@
                         },
                         {
                             "question_no": 4,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のうち、whileループを使って5回\"Hello\"を出力する正しいコードはどれですか？<br>a.<br><code>count = 5<br>while count > 0:<br>&#0009;print(\"Hello\")<br></code>b.<br><code>count = 0<br>while count < 5:<br>&#0009;print(\"Hello\")<br>&#0009;count += 1<br></code>c.<br><code>count = 0<br>while count <= 5:<br>&#0009;print(\"Hello\")<br>&#0009;count += 1</code>",
                             "choices": ["a", "b", "c"],
                             "answer": 1,
@@ -254,7 +295,7 @@
                         },
                         {
                             "question_no": 5,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のうち、無限ループになるコードはどれですか？<br>a. <br><code>while True:<br>&#0009;pass<br></code>b.<br><code>for i in range(10):<br>&#0009;pass<br></code>c. <br><code>while False:<br>&#0009;pass</code>",
                             "choices": ["a", "b", "c"],
                             "answer": 0,
@@ -269,11 +310,11 @@
                         "url": "if-and-for"
                     },
                     "title": "繰り返し(for文)",
-                    "section": 3,
+                    "section": 4,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの出力は何ですか？<span>(改行を除く)</span><br><code>for i in range(3):<br>&#0009;print(i)</code>",
                             "choices": ["1 2 3", "0 1 2", "0 1 2 3"],
                             "answer": 1,
@@ -281,7 +322,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のうち、forループを使って0から4までの数値を出力する正しいコードはどれですか？<br>a.<br><code>for i in range(5):<br>&#0009;print(i)</code><br>b.<br><code>for i in range(4):<br>&#0009;print(i)</code><br>c.<br><code>for i in range(1, 5):<br>&#0009;print(i)</code>",
                             "choices": ["a", "b", "c"],
                             "answer": 0,
@@ -289,7 +330,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの出力は何ですか？<span>(改行を除く)</span><br><code>for i in range(1, 10, 2):<br>&#0009;print(i)<br></code>",
                             "choices": ["1 2 3 4 5 6 7 8 9", "1 3 5 7 9", "2 4 6 8 10"],
                             "answer": 1,
@@ -297,7 +338,7 @@
                         },
                         {
                             "question_no": 4,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの出力は何ですか？<span>(改行を除く)</span><br><code>for i in range(3, -1, -1):<br>&#0009;print(i)<br></code>",
                             "choices": ["3 2 1", "3 2 1 0", "0 1 2 3"],
                             "answer": 1,
@@ -312,11 +353,11 @@
                         "url": "if-and-for"
                     },
                     "title": "確認問題",
-                    "section": 4,
+                    "section": 5,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 2,
+                            "questionType": 3,
                             "question": "<h4>与えられた数が偶数か奇数かを判定するプログラムを作成してください。<br>数が偶数の場合は 'Even' を出力し、奇数の場合は 'Odd' を出力してください。</h4>",
                             "testsCount": 5,
                             "tests": [
@@ -344,7 +385,7 @@
                         },                        
                         {
                             "question_no": 2,
-                            "questionType": 2,
+                            "questionType": 3,
                             "question": "<h4>与えられた年が閏年かどうかを判定するプログラムを作成してください。閏年の場合はYesを、違う場合はNoを出力してください。</h4><br>閏年の条件は以下の通りです。<br>1. 西暦年が4で割り切れる場合は、閏年です。<br>2. ただし、西暦年が100で割り切れる場合は、閏年ではありません。<br>3. ただし、西暦年が400で割り切れる場合は、閏年です。",
                             "testsCount": 5,
                             "tests": [
@@ -372,7 +413,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 2,
+                            "questionType": 3,
                             "question": "<h4>2つの数が与えられるので、与えられた範囲内のすべての偶数を出力するプログラムを作成してください。</h4><br>※最初の数と最後の数は、必ず偶数です。",
                             "testsCount": 5,
                             "tests": [
@@ -416,9 +457,21 @@
                     "title": "list",
                     "section": 1,
                     "questions": [
+                        
+                    ]
+                },
+                {
+                    "parent": {
+                        "id": 3,
+                        "title": "配列",
+                        "url": "list"
+                    },
+                    "title": "list",
+                    "section": 2,
+                    "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "リストの要素にアクセスするための正しい方法はどれですか？",
                             "choices": ["my_list{0}", "my_list[0]", "my_list(0)"],
                             "answer": 1,
@@ -426,7 +479,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "リストの末尾に要素を追加するメソッドはどれですか？",
                             "choices": ["append()", "add()", "insert()"],
                             "answer": 0,
@@ -434,7 +487,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "リストの要素数を取得する方法はどれですか？",
                             "choices": ["count(my_list)", "size(my_list)", "len(my_list)"],
                             "answer": 2,
@@ -442,7 +495,7 @@
                         },
                         {
                             "question_no": 4,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "リストの要素が含まれているかどうかを確認する方法はどれですか？",
                             "choices": ["element in my_list", "my_list.has(element)", "my_list.contains(element)"],
                             "answer": 0,
@@ -457,11 +510,11 @@
                         "url": "list"
                     },
                     "title": "dict",
-                    "section": 2,
+                    "section": 3,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "辞書を作成する正しい方法はどれですか？",
                             "choices": ["dict = [key1: value1, key2: value2]", "dict = {key1: value1, key2: value2}", "dict = (key1: value1, key2: value2)"],
                             "answer": 1,
@@ -469,7 +522,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "辞書からキーの値を取得する方法はどれですか？",
                             "choices": ["dict.get(key)", "dict.key()", "dict.key"],
                             "answer": 0,
@@ -477,7 +530,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "存在しないキーに対して`dict.get(key)`を使用すると、何が返されますか？",
                             "choices": ["None", "KeyError", "0"],
                             "answer": 0,
@@ -485,7 +538,7 @@
                         },
                         {
                             "question_no": 4,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "辞書に新しいキーと値を追加する正しい方法はどれですか？",
                             "choices": ["dict.append({key: value})", "dict.update({key: value})", "dict[key] = value"],
                             "answer": 2,
@@ -493,7 +546,7 @@
                         },
                         {
                             "question_no": 5,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "辞書のキーと値を反復する方法はどれですか？",
                             "choices": ["for key, value in dict", "for key, value in dict.items()", "for key, value in dict.keys()"],
                             "answer": 1,
@@ -501,7 +554,7 @@
                         },
                         {
                             "question_no": 6,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "キーが辞書に存在するかどうかを確認する方法はどれですか？",
                             "choices": ["key in dict", "dict.contains(key)", "dict.has_key(key)"],
                             "answer": 0,
@@ -516,11 +569,11 @@
                         "url": "list"
                     },
                     "title": "tuple",
-                    "section": 3,
+                    "section": 4,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "タプルを作成するにはどの構文を使用しますか？",
                             "choices": ["tuple = [1, 2, 3]", "tuple = (1, 2, 3)", "tuple = {1, 2, 3}"],
                             "answer": 1,
@@ -528,7 +581,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "タプルの要素を変更することはできますか？",
                             "choices": ["できる", "できない", "タプルの種類による"],
                             "answer": 1,
@@ -536,7 +589,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "タプルの特性として誤っているものはどれですか？",
                             "choices": ["不変である", "順序が保証される", "可変である"],
                             "answer": 2,
@@ -544,7 +597,7 @@
                         },
                         {
                             "question_no": 4,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの出力は何ですか？<br><code>my_tuple = tuple(\"hello\")<br>print(my_tuple)<br></code>",
                             "choices": ["('h', 'e', 'l', 'l', 'o')", "['h', 'e', 'l', 'l', 'o']", "\"hello\""],
                             "answer": 0,
@@ -559,11 +612,11 @@
                         "url": "list"
                     },
                     "title": "set",
-                    "section": 4,
+                    "section": 5,
                     "questions": [
                         {
                           "question_no": 1,
-                          "questionType": 1,
+                          "questionType": 2,
                           "question": "set型の特徴として正しいものを選びなさい。",
                           "choices": ["重複要素を持たない", "順序を保持する", "要素の追加・削除が可能"],
                           "answer": 0,
@@ -571,7 +624,7 @@
                         },
                         {
                           "question_no": 2,
-                          "questionType": 1,
+                          "questionType": 2,
                           "question": "setの初期化方法として正しいものを選びなさい。",
                           "choices": ["set([1, 2, 3])", "set(1, 2, 3)", "set{1, 2, 3}"],
                           "answer": 0,
@@ -579,7 +632,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のコードの出力は何ですか？<span>(位置が異なることがあります。)</span><br><code>my_set = set(\"hello\")<br>print(my_set)<br></code>",
                             "choices": ["{'h', 'e', 'l', 'l', 'o'}", "{'h', 'e', 'l', 'o'}", "'hello'"],
                             "answer": 1,
@@ -594,11 +647,11 @@
                         "url": "list"
                     },
                     "title": "確認問題",
-                    "section": 5,
+                    "section": 6,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 2,
+                            "questionType": 3,
                             "question": "<h4>与えられる数の合計を計算するプログラムを作成してください。</h4><br>1行目に与えられる数字の個数が与えられるので、その後の数の合計を出力してください。<br>また、できるだけlistを使用するようにしてください。</h4>",
                             "testsCount": 5,
                             "tests": [
@@ -642,9 +695,21 @@
                     "title": "関数",
                     "section": 1,
                     "questions": [
+
+                    ]
+                },
+                {
+                    "parent": {
+                        "id": 4,
+                        "title": "関数・モジュール",
+                        "url": "function"
+                    },
+                    "title": "関数",
+                    "section": 2,
+                    "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "Pythonで関数を定義するためのキーワードはどれですか？",
                             "choices": ["define", "function", "def"],
                             "answer": 2,
@@ -652,7 +717,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "引数を持たない関数を定義するにはどのように書きますか？",
                             "choices": ["def func():", "def func:", "function func()"],
                             "answer": 0,
@@ -660,7 +725,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "返り値のある関数を定義するために使用されるキーワードはどれですか？",
                             "choices": ["yield", "return", "giveback"],
                             "answer": 1,
@@ -668,7 +733,7 @@
                         },
                         {
                             "question_no": 4,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "次のうち、無名関数を定義するために使うキーワードはどれですか？",
                             "choices": ["def", "lambda", "func"],
                             "answer": 1,
@@ -676,7 +741,7 @@
                         },
                         {
                             "question_no": 5,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "filter()関数は何を行いますか？",
                             "choices": ["リストの要素を並び替える", "条件に合う要素だけを抽出する", "リストの要素を変換する"],
                             "answer": 1,
@@ -691,11 +756,11 @@
                         "url": "function"
                     },
                     "title": "モジュール",
-                    "section": 2,
+                    "section": 3,
                     "questions": [
                         {
                             "question_no": 1,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "数値計算に特化したPythonモジュールはどれですか？",
                             "choices": ["Flask", "Django", "NumPy"],
                             "answer": 2,
@@ -703,7 +768,7 @@
                         },
                         {
                             "question_no": 2,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "データフレームを扱うためのモジュールはどれですか？",
                             "choices": ["Pygame", "NumPy", "Pandas"],
                             "answer": 2,
@@ -711,7 +776,7 @@
                         },
                         {
                             "question_no": 3,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "HTTPリクエストを送信するためのモジュールはどれですか？",
                             "choices": ["PyTorch", "Matplotlib", "Requests"],
                             "answer": 2,
@@ -719,7 +784,7 @@
                         },
                         {
                             "question_no": 4,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "ブラウザの自動操作とテストのためのモジュールはどれですか？",
                             "choices": ["Pandas", "Selenium", "Pillow"],
                             "answer": 1,
@@ -727,7 +792,7 @@
                         },
                         {
                             "question_no": 5,
-                            "questionType": 1,
+                            "questionType": 2,
                             "question": "シンプルな2Dゲームを作成するためのライブラリはどれですか？",
                             "choices": ["NumPy", "Pygame", "PyTorch"],
                             "answer": 1,

@@ -30,3 +30,15 @@ def get_section_clear(user: str, id: int, section: int) -> list[tuple[int]]:
     sql = 'SELECT question_no FROM clear WHERE uid=? AND id=? AND section=?'
     cur.execute(sql, (user, id, section))
     return cur.fetchall()
+
+
+def update_section():
+    # cur.execute('UPDATE clear SET section = section + 1 WHERE id=4')
+    cur.execute('DELETE FROM clear WHERE section=1')
+    # cur.execute('DELETE FROM clear')
+    conn.commit()
+    cur.close()
+    conn.close()
+
+if __name__ == '__main__':
+    update_section()
