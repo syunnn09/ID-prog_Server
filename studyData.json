@@ -18,7 +18,7 @@
                             "question_no": 1,
                             "questionType": 1,
                             "title": "文字を出力してみよう",
-                            "detail": "<p>文字を出力するには\"print\"を使用します。<br><br>Hello Worldを出力してみましょう。<br>出力するには以下のコードをエディターに入力してみましょう。</p><code>print(\"Hello World\")</code><p>入力が出来たら実行ボタンを押して結果を確認してください。"
+                            "detail": "<p>文字を出力するには\"print\"を使用します。<br><br>Hello Worldという文字列を出力してみましょう。<br>出力するには以下のコードをエディターに入力してください。</p><br><code>print(\"Hello World\")</code><br><br><p>入力が出来たら実行ボタンを押して結果を確認してください。"
                         },
                         {
                             "question_no": 2,
@@ -31,6 +31,12 @@
                             "questionType": 1,
                             "title": "変数を使ってみよう",
                             "detail": "<p>変数とは数値や文字列などが入る箱と考えてください。<br>以下のコードを実行してみましょう。</p><br><code>i = 20<br>print(i)</code><br><br><p>このコードでは1行目に\"i\"という変数を宣言してその中に20を代入しています。<br>そして2行目に\"i\"を出力しています。<br>iの値を変更して再度実行してみてください。</p>"
+                        },
+                        {
+                            "question_no": 4,
+                            "questionType": 1,
+                            "title": "文字列を受け取ってみよう",
+                            "detail": "<p>pythonで文字列を受け取る場合、\"input\"を使用します。<br><br>以下のコードを使用して、ユーザーに名前を入力してもらい、それを出力してみましょう。<br>実行する前に、入力タブに名前を入力してください。</p><br><code>name = input(\"名前を入力してください: \")<br>print(\"入力された名前は\", name, \"です。\")</code><br><br><p>入力された文字列を数値に変換する場合、以下のコードを入力してください。</p><br><code>num = int(input(\"数値を入力してください。: \"))<br>print(\"入力された数値は\", num, \"です。\")</code>"
                         }
                     ]
                 },
@@ -195,10 +201,27 @@
                         "title": "比較・繰り返し",
                         "url": "if-and-for"
                     },
-                    "title": "比較(if文)",
+                    "title": "はじめに",
                     "section": 1,
                     "questions": [
-
+                        {
+                            "question_no": 1,
+                            "questionType": 1,
+                            "title": "if文について理解しよう",
+                            "detail": "<p>プログラミングにおける\"if\"文は、指定した条件が真の場合にのみ特定のコードブロックを実行するために使用されます。<br><br>エディターに以下のコードを入力して、ある数値が10より大きいかどうかをチェックしてみましょう。</p><br><code>num = 15<br>if num > 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(\"数値は10より大きいです\")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(\"数値は10より小さいです\")</code>"
+                        },
+                        {
+                            "question_no": 2,
+                            "questionType": 1,
+                            "title": "while文について理解しよう",
+                            "detail": "<p>プログラミングにおける\"while\"文は、指定した条件が真の間、特定のコードブロックを繰り返し実行するための構文です。<br><br>エディターに以下のコードを入力して、カウンターを使って10回ループを繰り返し、それぞれの回数を出力してみましょう。</p><br><code>counter = 1<br>while counter <= 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(\"ループ回数:\", counter)<br>&nbsp;&nbsp;&nbsp;&nbsp;counter += 1</code>"
+                        },
+                        {
+                            "question_no": 3,
+                            "questionType": 1,
+                            "title": "for文について理解しよう",
+                            "detail": "<p>プログラミングにおける\"for\"ループは、順番に並んだ要素のそれぞれに対して、指定した処理を繰り返し実行するための構文です。<br><br>エディターに以下のコードを入力して、1から5までの数値を順番に表示させてみましょう。</p><br><code>for i in range(1, 6):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(i)</code>"
+                        }
                     ]
                 },
                 {
@@ -454,7 +477,7 @@
                         "title": "配列",
                         "url": "list"
                     },
-                    "title": "list",
+                    "title": "はじめに",
                     "section": 1,
                     "questions": [
                         
@@ -692,10 +715,21 @@
                         "title": "関数・モジュール",
                         "url": "function"
                     },
-                    "title": "関数",
+                    "title": "はじめに",
                     "section": 1,
                     "questions": [
-
+                        {
+                            "question_no": 1,
+                            "questionType": 1,
+                            "title": "関数を使ってみよう",
+                            "detail": "<p>pythonで関数を定義するには\"def\"キーワードを使用します。<br><br>エディターに以下のコードを入力して、引数を受け取りその引数を出力する簡単な関数を定義してみましょう。</p><br><code>def say_hello(name):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(\"こんにちは、\", name, \"さん\")<br><br># 関数を呼び出す<br>say_hello(\"太郎\")</code>"
+                        },
+                        {
+                            "question_no": 2,
+                            "questionType": 1,
+                            "title": "外部のプログラムを呼び出してみよう",
+                            "detail": "<p>pythonで外部のモジュールやパッケージを読み込むには\"import\"キーワードを使用します。<br><br>エディターに以下のコードを入力して、mathモジュールからsqrt関数をインポートして平方根を計算してみましょう。</p><br><code>import math<br>num = 16<br>root = math.sqrt(num)<br>print(num, \"の平方根は\", root, \"です\")</code>"
+                        }
                     ]
                 },
                 {
