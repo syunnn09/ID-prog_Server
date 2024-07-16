@@ -90,4 +90,12 @@ def get_section_data():
 
     return json.dumps(utils.get_section_data(uid, url, section))
 
+@app.route('/questionnaire', methods=['POST'])
+def questionnaire():
+    good = request.json['good']
+    bad = request.json['bad']
+    dbutils.questionnaire(good, bad)
+    return 'ok'
+
+
 app.run('localhost', 55555, debug=False)

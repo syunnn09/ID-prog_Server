@@ -40,5 +40,10 @@ def update_section():
     cur.close()
     conn.close()
 
+def questionnaire(good: str, bad: str):
+    sql = 'INSERT INTO questionnaire(good, bad) VALUES(?, ?)'
+    cur.execute(sql, (good, bad, ))
+    conn.commit()
+
 if __name__ == '__main__':
     update_section()

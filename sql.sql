@@ -12,3 +12,9 @@ CREATE TABLE IF NOT EXISTS clear(
     question_no INT NOT NULL,
     UNIQUE(uid, id, section, question_no)
 );
+
+CREATE TABLE IF NOT EXISTS questionnaire(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    good TEXT,
+    bad TEXT
+);
