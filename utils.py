@@ -156,6 +156,56 @@ def get_args(request: Request) -> str:
     question = get_question(section, question_no)
     return question['tests'][test_no]
 
+errors = {
+    SyntaxError: {
+        'string': "SyntaxError",
+        'text': ': や ) などが抜けている可能性があります',
+    },
+    IndentationError: {
+        'string': 'IndentationError',
+        'text': 'インデントが抜けている可能性があります',
+    },
+    NameError: {
+        'string': 'NameError',
+        'text': '宣言されていない変数が参照されました',
+    },
+    TypeError: {
+        'string': 'TypeError',
+        'text': '異なるデータ型の演算が行われました',
+    },
+    ValueError: {
+        'string': 'ValueError',
+        'text': '関数に不適切な値が渡されました',
+    },
+    AttributeError: {
+        'string': 'AttributeError',
+        'text': '「型」型に「属性」という属性は存在しません',
+    },
+    IndexError: {
+        'string': 'IndexError',
+        'text': 'リストの要素外を参照しました',
+    },
+    KeyError: {
+        'string': 'KeyError',
+        'text': '存在しない辞書のキーを指定しました',
+    },
+    ModuleNotFoundError: {
+        'string': 'ModuleNotFoundError',
+        'text': '存在しないモジュールをインポートしました',
+    },
+    ZeroDivisionError: {
+        'string': 'ZeroDivisionError',
+        'text': '0で割り算が行われました'
+    },
+}
+
+def raise_error(err: str):
+    for error, v in errors.items():
+        string = v.get('string')
+        text = v.get('text')
+        if string in err:
+            raise error(text)
+
 if __name__ == '__main__':
     print(get_progress('cJ2HzFoEExXyHZr7yzQMWv0OOHe2'))
     # print(getStudies())

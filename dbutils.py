@@ -45,5 +45,10 @@ def questionnaire(good: str, bad: str):
     cur.execute(sql, (good, bad, ))
     conn.commit()
 
+def get_questionnaire():
+    sql = 'SELECT * FROM questionnaire'
+    cur.execute(sql)
+    return cur.fetchall()
+
 if __name__ == '__main__':
     update_section()

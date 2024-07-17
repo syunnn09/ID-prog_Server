@@ -97,5 +97,21 @@ def questionnaire():
     dbutils.questionnaire(good, bad)
     return 'ok'
 
+@app.route('/questionnaire')
+def show_questionnaire():
+    questionnaires = dbutils.get_questionnaire()
+    html = '<table border="1" style="border-collapse: collapse;">'
+    html += '<thead><tr style="text-align: center;"><td>ID</td><td>good</td><td>bad</td></tr></thead>'
+    for questionnaire in questionnaires:
+        html += '<tr>'
+        for j, item in enumerate(questionnaire):
+            if j == 0:
+                lis = str(item)
+            else:
+                lis = '<ul>' + ''.join([f'<li>{i}</li>' for i in str(item).split('\n') if i]) + '</ul>'
+            html += '<td style="padding: 0.25rem 1rem;">' + lis + '</td>'
+        html += '</tr>'
+    html += '</table>'
+    return html
 
-app.run('localhost', 55555, debug=False)
+app.run(host='localhost', port=55555, debug=True)

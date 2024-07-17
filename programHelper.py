@@ -16,6 +16,7 @@ def execute(data: str, args: str) -> dict[str, str]:
     try:
         p = subprocess.Popen('py data.py', shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='shift-jis')
         out, err = p.communicate(timeout=5, input=args)
+        utils.raise_error(err)
     except TimeoutExpired as e:
         p.kill()
         print(f'{e = }')
