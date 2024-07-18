@@ -1,7 +1,10 @@
 import sqlite3
+import threading
 
 conn = sqlite3.connect('data.db', check_same_thread=False)
 cur = conn.cursor()
+
+lock = threading.Lock()
 
 def solve(uid: str, id: int, section: int, question_no: int) -> None:
     try:
@@ -17,8 +20,12 @@ def get_clear(user: str, id: int) -> list[tuple[int]]:
     return cur.fetchall()
 
 def get_all_clear(user: str) -> list[tuple[int]]:
-    sql = 'SELECT id, section, question_no FROM clear WHERE uid=?'
-    cur.execute(sql, (user, ))
+    try:
+        lock.acquire(True)
+        sql = 'SELECT id, section, question_no FROM clear WHERE uid=?'
+        cur.execute(sql, (user, ))
+    finally:
+        lock.release()
     return cur.fetchall()
 
 def get_clear_by_section(user: str, section: int) -> list[tuple[int]]:
