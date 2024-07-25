@@ -24,7 +24,7 @@ def get_total_questions() -> list[int]:
     questions = []
     for i, study in enumerate(data['studies']):
         questions.append(0)
-        for section in study['sections']:
+        for section in study['sections'][1:]:
             questions[i] += len(section['questions'])
     return questions
 
